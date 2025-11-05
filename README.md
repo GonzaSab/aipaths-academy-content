@@ -21,29 +21,32 @@ All content is available in:
 ```
 /en/                           # English content
   /docs/                       # Documentation
-    /ai/                       # AI topics (Claude, agents, MCP)
-    /web-dev/                  # Web development
-    /tools/                    # Tools and utilities
+    001_ai-agents-guide.en.md
+    002_claude-context-window.en.md
+    003_superclaude.en.md
   /blogs/                      # Blog posts
+    001_getting-started-with-claude.en.md
 
 /es/                           # Spanish content
-  /docs/                       # Same structure as English
-  /blogs/
+  /docs/                       # Documentation (Spanish versions)
+    001_ai-agents-guide.es.md
+    002_claude-context-window.es.md
+    003_superclaude.es.md
+  /blogs/                      # Blog posts (Spanish versions)
+    001_comenzando-con-claude.es.md
 
 /templates/                    # Content templates
   doc-template.md
   blog-template.md
-  CONTRIBUTING.md
-  README.md
 ```
 
 ### How It Works
 
 - **Language folders** (`/en/`, `/es/`) organize content by language
-- **Topic folders** (`/ai/`, `/web-dev/`, `/tools/`) help organize files visually
+- **Numeric prefixes** (`001_`, `002_`, `003_`) control the display order
 - **Filenames** use language suffixes: `.en.md` or `.es.md`
-- **URLs** are flat - the filename becomes the slug
-  - Example: `getting-started.en.md` → `/getting-started`
+- **URLs** are generated from the filename (without prefix and language suffix)
+  - Example: `001_getting-started.en.md` → `/getting-started`
 
 ## Quick Start
 
@@ -60,12 +63,14 @@ cd aipaths-academy-content
 
 For documentation:
 ```bash
-cp templates/doc-template.md en/docs/ai/your-topic.en.md
+# Find the next available number (e.g., if last is 003_, use 004_)
+cp templates/doc-template.md en/docs/004_your-topic.en.md
 ```
 
 For blog posts:
 ```bash
-cp templates/blog-template.md en/blogs/your-post.en.md
+# Find the next available number
+cp templates/blog-template.md en/blogs/002_your-post.en.md
 ```
 
 **3. Edit in your favorite editor**
@@ -170,17 +175,20 @@ Creating content in both languages:
 ### Adding a New Guide
 
 ```bash
-# 1. Copy template
-cp templates/doc-template.md en/docs/ai/claude-streaming.en.md
+# 1. Determine the next number (check existing files in /en/docs/)
+# If last file is 003_superclaude.en.md, use 004_
 
-# 2. Edit the file (fill in frontmatter, write content)
+# 2. Copy template with numeric prefix
+cp templates/doc-template.md en/docs/004_claude-streaming.en.md
 
-# 3. Create Spanish version
-cp en/docs/ai/claude-streaming.en.md es/docs/ai/claude-streaming.es.md
+# 3. Edit the file (fill in frontmatter, write content)
 
-# 4. Translate Spanish version
+# 4. Create Spanish version
+cp en/docs/004_claude-streaming.en.md es/docs/004_claude-streaming.es.md
 
-# 5. Commit
+# 5. Translate Spanish version
+
+# 6. Commit
 git add .
 git commit -m "docs: Add guide on Claude streaming responses"
 git push
@@ -189,12 +197,15 @@ git push
 ### Adding a Blog Post
 
 ```bash
-# 1. Copy template
-cp templates/blog-template.md en/blogs/my-first-ai-app.en.md
+# 1. Determine the next number (check existing files in /en/blogs/)
+# If last file is 001_getting-started-with-claude.en.md, use 002_
 
-# 2. Write your post
+# 2. Copy template with numeric prefix
+cp templates/blog-template.md en/blogs/002_my-first-ai-app.en.md
 
-# 3. Commit
+# 3. Write your post
+
+# 4. Commit
 git add .
 git commit -m "blog: Create tutorial for building first AI app"
 git push

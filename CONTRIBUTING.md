@@ -4,44 +4,39 @@ Thank you for your interest in contributing! This repository is designed to be s
 
 ## Repository Structure
 
-This repository uses a simple, language-based structure:
+This repository uses a simple, language-based structure with numeric prefixes for ordering:
 
 ```
 /en/                           # English content
   /docs/                       # Documentation
-    /ai/                       # AI-related docs (Claude, agents, etc.)
-      getting-started.en.md
-      ai-agents-guide.en.md
-    /web-dev/                  # Web development docs
-      buy-domain.en.md
-    /tools/                    # Tools and utilities
-      cursor-guide.en.md
+    001_ai-agents-guide.en.md
+    002_claude-context-window.en.md
+    003_superclaude.en.md
   /blogs/                      # Blog posts
-    my-first-post.en.md
+    001_getting-started-with-claude.en.md
 
 /es/                           # Spanish content
-  /docs/                       # Same structure as English
-    /ai/
-      getting-started.es.md
-  /blogs/
-    my-first-post.es.md
+  /docs/                       # Documentation (Spanish versions)
+    001_ai-agents-guide.es.md
+    002_claude-context-window.es.md
+    003_superclaude.es.md
+  /blogs/                      # Blog posts (Spanish versions)
+    001_comenzando-con-claude.es.md
 
 /templates/                    # Templates for creating new content
   doc-template.md
   blog-template.md
-  CONTRIBUTING.md
-  README.md
 ```
 
 ### Important Naming Convention
 
-All files use language suffixes:
-- English: `.en.md`
-- Spanish: `.es.md`
+All files use numeric prefixes and language suffixes:
+- **Numeric prefix**: `001_`, `002_`, `003_` - Controls display order
+- **Language suffix**: `.en.md` (English) or `.es.md` (Spanish)
 
-The filename (without language suffix) becomes the URL slug, so:
-- `getting-started.en.md` → `/getting-started`
-- `getting-started.es.md` → `/getting-started`
+The filename (without prefix and language suffix) becomes the URL slug:
+- `001_getting-started.en.md` → `/getting-started`
+- `002_ai-agents-guide.es.md` → `/ai-agents-guide`
 
 ## How to Contribute
 
@@ -56,16 +51,15 @@ The filename (without language suffix) becomes the URL slug, so:
 
 ### Adding New Documentation
 
-**Step 1:** Choose the right folder
+**Step 1:** Determine the next number
 
-- **AI topics** (Claude, agents, MCP) → `/en/docs/ai/` or `/es/docs/ai/`
-- **Web development** → `/en/docs/web-dev/` or `/es/docs/web-dev/`
-- **Tools** → `/en/docs/tools/` or `/es/docs/tools/`
+Check existing files in `/en/docs/` to find the highest number (e.g., if last is `003_`, use `004_`)
 
-**Step 2:** Copy the template
+**Step 2:** Copy the template with numeric prefix
 
 ```bash
-cp templates/doc-template.md en/docs/ai/your-topic.en.md
+# If the last file is 003_superclaude.en.md, use 004_
+cp templates/doc-template.md en/docs/004_your-topic.en.md
 ```
 
 **Step 3:** Fill in the frontmatter
@@ -98,17 +92,20 @@ Follow the template structure. Key guidelines:
 **Step 5:** Create Spanish version (optional but encouraged)
 
 ```bash
-cp en/docs/ai/your-topic.en.md es/docs/ai/your-topic.es.md
+# Use the same numeric prefix
+cp en/docs/004_your-topic.en.md es/docs/004_your-topic.es.md
 ```
 
 Then translate the content. Don't just use machine translation—review and adjust for natural language.
 
 ### Adding Blog Posts
 
-**Step 1:** Copy the template
+**Step 1:** Determine the next number and copy the template
 
 ```bash
-cp templates/blog-template.md en/blogs/your-post-title.en.md
+# Check existing files in /en/blogs/ for the highest number
+# If the last file is 001_getting-started-with-claude.en.md, use 002_
+cp templates/blog-template.md en/blogs/002_your-post-title.en.md
 ```
 
 **Step 2:** Fill in the frontmatter
@@ -306,9 +303,9 @@ This repository is optimized for Obsidian editing:
 4. **Preview**: See how it looks in Obsidian's preview mode
 5. **Commit**: Use git in terminal or Obsidian git plugin
 
-### Visual Organization
+### File Ordering
 
-Topic folders (`/ai/`, `/web-dev/`, `/tools/`) are for **visual organization only**. They help you find files in Obsidian but don't affect URLs.
+Numeric prefixes (`001_`, `002_`, `003_`) control the display order of documentation. This ensures content appears in a logical learning sequence.
 
 ### Obsidian Features
 

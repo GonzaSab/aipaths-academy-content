@@ -6,7 +6,7 @@ tags:
   - framework
   - claude-code
   - automation
-  - beginner
+  - intermedio
 published: true
 lastUpdated: 2025-11-04
 author: AIPaths Academy

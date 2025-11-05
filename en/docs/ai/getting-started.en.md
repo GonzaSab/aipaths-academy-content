@@ -1,12 +1,10 @@
 ---
 title: "Getting Started with Claude AI"
 description: "Learn how to integrate Claude AI into your applications with practical examples and best practices"
-category: "claude"
-order: 1
+tags: ["claude", "getting-started", "beginner", "api"]
 published: true
 lastUpdated: "2025-01-05"
 author: "AIPaths Academy"
-tags: ["claude", "getting-started", "beginner", "api"]
 ---
 
 # Getting Started with Claude AI
@@ -71,8 +69,6 @@ async function chat(message: string) {
 const answer = await chat('Explain quantum computing in simple terms');
 console.log(answer);
 ```
-
-See the [complete example](./examples/basic-chat.js) for more details.
 
 **Python:**
 ```python
@@ -144,8 +140,6 @@ for await (const event of stream) {
 }
 ```
 
-See the [streaming example](./examples/streaming-response.ts) for a complete implementation.
-
 ## Best Practices
 
 ### 1. Handle Errors Gracefully
@@ -197,21 +191,15 @@ console.log('Tokens used:', response.usage);
 
 ### Chatbot
 
-Build a conversational interface:
-- [Simple Chatbot Example](./examples/simple-chatbot.ts)
-- [Chatbot with Memory](./examples/chatbot-with-memory.ts)
+Build a conversational interface with conversation history and context management.
 
 ### Content Generation
 
-Generate articles, summaries, or creative content:
-- [Blog Post Generator](./examples/blog-generator.ts)
-- [Code Documentation Generator](./examples/doc-generator.ts)
+Generate articles, summaries, or creative content with structured prompts.
 
 ### Data Analysis
 
-Analyze and extract insights from text:
-- [Sentiment Analysis](./examples/sentiment-analysis.ts)
-- [Entity Extraction](./examples/entity-extraction.ts)
+Analyze and extract insights from text data.
 
 ## Troubleshooting
 
@@ -238,13 +226,14 @@ Analyze and extract insights from text:
 Now that you're set up:
 
 1. **Explore Advanced Features**
-   - [Prompt Engineering Best Practices](/docs/claude/prompt-engineering)
-   - [Using Tools and Function Calling](/docs/claude/tools)
-   - [Vision Capabilities](/docs/claude/vision)
+   - Prompt engineering best practices
+   - Using tools and function calling
+   - Vision capabilities
 
 2. **Build Something**
-   - [Tutorial: Build a CLI Assistant](/blog/en/build-cli-assistant-claude)
-   - [Tutorial: Create a Knowledge Base Bot](/blog/en/knowledge-base-bot)
+   - Create a CLI assistant
+   - Build a knowledge base bot
+   - Integrate with your application
 
 3. **Join the Community**
    - [Discord](https://discord.gg/anthropic)

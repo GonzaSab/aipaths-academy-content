@@ -3,12 +3,9 @@ title: "Getting Started with Claude: Your First AI Integration"
 description: "Learn how to integrate Claude AI into your applications with this beginner-friendly tutorial. Includes code examples and best practices."
 author: "AIPaths Academy"
 publishedAt: "2025-01-05"
-updatedAt: "2025-01-05"
-category: "tutorial"
 tags: ["claude", "ai", "tutorial", "beginner"]
+readingTime: 10
 published: true
-featured: true
-locale: "en"
 ---
 
 # Getting Started with Claude: Your First AI Integration
@@ -119,7 +116,7 @@ Run it:
 node index.js
 ```
 
-🎉 **Congratulations!** You just made your first Claude API call!
+Congratulations! You just made your first Claude API call!
 
 ## Step 4: Building a Simple Chatbot
 
@@ -289,17 +286,10 @@ async function retryWithBackoff(fn, maxRetries = 3) {
 
 ## Common Pitfalls to Avoid
 
-❌ **Don't**: Hardcode API keys
-✅ **Do**: Use environment variables
-
-❌ **Don't**: Ignore error handling
-✅ **Do**: Implement try/catch blocks
-
-❌ **Don't**: Send entire conversation history every time
-✅ **Do**: Truncate old messages to manage tokens
-
-❌ **Don't**: Forget to set max_tokens
-✅ **Do**: Always specify reasonable limits
+- Don't hardcode API keys - Use environment variables
+- Don't ignore error handling - Implement try/catch blocks
+- Don't send entire conversation history every time - Truncate old messages to manage tokens
+- Don't forget to set max_tokens - Always specify reasonable limits
 
 ## What's Next?
 
@@ -309,13 +299,6 @@ Now that you've built your first Claude integration, here are some ideas to expl
 2. **Implement RAG** - Add knowledge base search
 3. **Use Function Calling** - Let Claude use tools
 4. **Try Vision** - Process images with Claude
-
-## Resources
-
-- [Full Code Repository](https://github.com/GonzaSab/aipaths-academy-content/tree/main/docs/claude/examples)
-- [Claude API Documentation](https://docs.anthropic.com)
-- [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook)
-- [Join Our Community](https://discord.gg/aipaths-academy)
 
 ## Conclusion
 
@@ -332,5 +315,3 @@ The possibilities are endless. What will you build with Claude?
 ---
 
 **Got questions?** Drop a comment below or [open an issue on GitHub](https://github.com/GonzaSab/aipaths-academy-content/issues)!
-
-**Want more tutorials?** Subscribe to our newsletter for weekly AI development tips.

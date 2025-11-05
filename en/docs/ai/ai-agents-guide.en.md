@@ -1,12 +1,10 @@
 ---
 title: "Understanding AI Agents in Claude Code"
 description: "Learn how AI agents work in Claude Code, why they matter, and how to leverage them effectively for complex tasks"
-category: "agents"
-order: 1
+tags: ["agents", "claude-code", "beginner", "context-window"]
 published: true
 lastUpdated: "2025-01-05"
 author: "AIPaths Academy"
-tags: ["agents", "claude-code", "beginner", "context-window"]
 ---
 
 # Understanding AI Agents in Claude Code
@@ -76,12 +74,6 @@ Each agent type has specific capabilities optimized for certain tasks:
 
 **Important principle:** Think about *what needs to be done*, not *who should do it*.
 
-### ❌ Wrong Mindset (Role-Based)
-"I need a database agent to handle all database things"
-
-### ✅ Correct Mindset (Task-Based)
-"I need to explore how authentication queries work in the database layer"
-
 ### Common Agent Tasks
 
 #### Explore Agent
@@ -103,11 +95,6 @@ Each agent type has specific capabilities optimized for certain tasks:
 - "Understand everything about authentication"
 ```
 
-**Thoroughness levels:**
-- `quick`: Basic searches, first matches (fast, less comprehensive)
-- `medium`: Moderate exploration, multiple locations
-- `very thorough`: Comprehensive analysis, all patterns and variants
-
 #### Plan Agent
 **Use when you need to:**
 - Break down complex implementations
@@ -127,43 +114,6 @@ Each agent type has specific capabilities optimized for certain tasks:
 - "Fix a typo"
 ```
 
-#### git-commit-guardian Agent
-**Use when you need to:**
-- Review changes before committing
-- Ensure secure commits (no secrets, API keys)
-- Create properly formatted commit messages
-- Follow commit conventions
-
-**Triggered by keywords:**
-```bash
-# User says:
-- "commit these changes"
-- "let's commit this"
-- "push the code"
-- "I'm done, save my work"
-
-# Claude Code automatically launches git-commit-guardian
-```
-
-#### playwright-browser-tester Agent
-**Use when you need to:**
-- Test web applications in browsers
-- Debug frontend issues
-- Verify page functionality
-- Check for console errors
-
-**Example tasks:**
-```bash
-# Good: Browser-specific testing
-- "Test http://localhost:3000 and check for console errors"
-- "Verify the login form works at /login"
-- "Check if the checkout flow completes successfully"
-
-# Bad: Non-browser tasks
-- "Test this Python function"
-- "Check if the API returns 200"
-```
-
 ## How the Context Window Works
 
 ### Understanding Token Limits
@@ -179,70 +129,6 @@ Claude Code (Sonnet 4.5) has a **200,000 token context window**. Approximately:
 3. **Search results**: Output from Grep, Glob, etc.
 4. **Tool outputs**: Results from bash commands, etc.
 5. **System prompts**: Instructions Claude Code uses
-
-### Context Window Management Strategies
-
-#### 1. Use Agents for Exploration
-
-**Before (wastes context):**
-```typescript
-// You ask Claude to search for authentication code
-Read("src/auth/login.ts")        // 2,000 tokens
-Read("src/auth/register.ts")     // 2,500 tokens
-Read("src/auth/middleware.ts")   // 1,800 tokens
-Read("src/auth/session.ts")      // 2,200 tokens
-Grep("authentication")           // 500 tokens
-Grep("login")                    // 600 tokens
-
-// Total: ~9,600 tokens consumed in YOUR context
-// Result: Files you may not even need are now in context forever
-```
-
-**After (saves context):**
-```typescript
-// Launch Explore agent
-Task("Explore authentication implementation", subagent_type: "Explore")
-
-// Agent uses its own context for all the searches and file reads
-// You only receive: ~500 token summary
-// Savings: ~9,100 tokens in YOUR context window
-```
-
-#### 2. Launch Agents in Parallel
-
-**Sequential (slower, uses more context):**
-```typescript
-// Takes 3x as long, fills up your context with intermediate results
-Task("Explore frontend routing")  // Wait... get results...
-Task("Explore API routes")         // Wait... get results...
-Task("Explore database models")    // Wait... get results...
-```
-
-**Parallel (faster, cleaner context):**
-```typescript
-// All three run at once, you get three summaries back simultaneously
-Task("Explore frontend routing") +
-Task("Explore API routes") +
-Task("Explore database models")
-```
-
-#### 3. Be Specific About What You Need
-
-**Vague (agent explores too much):**
-```bash
-"Explore the authentication system"
-→ Agent might read 50+ files
-→ Returns overwhelming summary
-→ You still don't know what you needed
-```
-
-**Specific (focused, efficient):**
-```bash
-"Find where user passwords are hashed and verified"
-→ Agent focuses on specific functionality
-→ Returns targeted summary
-→ You get exactly what you need
-```
 
 ### Context Window Best Practices
 
@@ -321,66 +207,6 @@ Task({
 **What you get:**
 A comprehensive plan you can review and execute, without your context filling up with exploratory searches.
 
-### Example 3: Secure Git Commits
-
-**Task:** You've made changes and want to commit them securely.
-
-**Approach:**
-```typescript
-// Simply say: "commit these changes"
-// git-commit-guardian agent launches automatically
-
-// The agent:
-// 1. Runs git status
-// 2. Reviews all changes
-// 3. Checks for secrets/API keys
-// 4. Ensures no sensitive data
-// 5. Generates proper commit message
-// 6. Creates the commit
-```
-
-**What you get:**
-A secure, well-formatted commit without manually checking for security issues.
-
-### Example 4: Testing Web Application
-
-**Task:** Verify your new feature works in the browser.
-
-**Approach:**
-```typescript
-// Launch playwright-browser-tester agent
-Task({
-  description: "Test checkout flow",
-  prompt: `Test the checkout flow at http://localhost:3000
-
-  Steps:
-  1. Navigate to /products
-  2. Add item to cart
-  3. Go to /checkout
-  4. Fill in payment form
-  5. Submit order
-
-  Check for:
-  - Console errors
-  - Failed network requests
-  - Successful order confirmation
-
-  Take screenshots at each step.`,
-  subagent_type: "playwright-browser-tester"
-})
-```
-
-**What the agent does:**
-1. Opens browser (Chromium)
-2. Navigates through flow
-3. Fills forms
-4. Takes screenshots
-5. Monitors console
-6. Reports issues found
-
-**What you get:**
-Complete test results with screenshots and error reports.
-
 ## Common Patterns
 
 ### Pattern 1: Parallel Exploration
@@ -414,20 +240,6 @@ Task("Plan adding profile picture upload", subagent_type: "Plan")
 // Then commit with git-commit-guardian
 ```
 
-### Pattern 3: Quick vs. Thorough Exploration
-
-Adjust thoroughness based on your needs:
-
-```typescript
-// Quick: Just need to find the right file
-Task("Find where users are created - quick search", subagent_type: "Explore")
-// Specify: thoroughness: quick
-
-// Thorough: Need complete understanding
-Task("Comprehensive analysis of the entire auth system", subagent_type: "Explore")
-// Specify: thoroughness: very thorough
-```
-
 ## When NOT to Use Agents
 
 Agents are powerful but not always necessary:
@@ -452,12 +264,6 @@ Agents are powerful but not always necessary:
    // Do: Bash("npm install")
    ```
 
-4. **You want to maintain conversation context**: If you need Claude to "remember" all details, keep it in main context
-   ```typescript
-   // Agent results are summaries - details are lost
-   // If you need full details in conversation, don't use agent
-   ```
-
 ## Troubleshooting
 
 ### "Agent found too many results"
@@ -480,26 +286,6 @@ Agents are powerful but not always necessary:
 - Try different phrasing of what you're looking for
 - Give the agent file path hints if you have them
 
-### "Context window still filling up"
-
-**Problem:** Despite using agents, context is growing.
-
-**Solutions:**
-- Ensure you're using agents for all exploration tasks
-- Launch multiple agents in parallel, not sequentially
-- Avoid re-reading files you've already explored
-- Start a fresh conversation if needed
-
-### "Agent taking too long"
-
-**Problem:** Agent hasn't returned results.
-
-**Solutions:**
-- Reduce thoroughness level
-- Narrow the scope of the task
-- Check if you asked for something too broad
-- For very large codebases, provide starting point hints
-
 ## Next Steps
 
 Now that you understand AI agents:
@@ -518,11 +304,6 @@ Now that you understand AI agents:
    - Practice launching multiple agents at once
    - Measure the time savings
    - Notice the context window benefits
-
-4. **Learn Advanced Patterns**
-   - [Building Complex Agent Workflows](/docs/agents/advanced-workflows)
-   - [Agent Prompt Engineering](/docs/agents/prompt-engineering)
-   - [Context Window Optimization](/docs/agents/context-optimization)
 
 ## Additional Resources
 

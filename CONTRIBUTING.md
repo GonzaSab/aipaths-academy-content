@@ -1,254 +1,334 @@
 # Contributing to AIPaths Academy Content
 
-Thank you for your interest in contributing! This guide will help you create high-quality content that helps others learn AI development.
+Thank you for your interest in contributing! This repository is designed to be simple and easy to use—you can edit in Obsidian, your favorite text editor, or directly on GitHub.
 
-## 📋 Table of Contents
+## Repository Structure
 
-- [Getting Started](#getting-started)
-- [Content Types](#content-types)
-- [Writing Guidelines](#writing-guidelines)
-- [Code Examples](#code-examples)
-- [Submission Process](#submission-process)
+This repository uses a simple, language-based structure:
 
-## 🚀 Getting Started
+```
+/en/                           # English content
+  /docs/                       # Documentation
+    /ai/                       # AI-related docs (Claude, agents, etc.)
+      getting-started.en.md
+      ai-agents-guide.en.md
+    /web-dev/                  # Web development docs
+      buy-domain.en.md
+    /tools/                    # Tools and utilities
+      cursor-guide.en.md
+  /blogs/                      # Blog posts
+    my-first-post.en.md
 
-### 1. Fork the Repository
+/es/                           # Spanish content
+  /docs/                       # Same structure as English
+    /ai/
+      getting-started.es.md
+  /blogs/
+    my-first-post.es.md
 
-Click the "Fork" button at the top of this repository.
-
-### 2. Clone Your Fork
-
-```bash
-git clone https://github.com/YOUR-USERNAME/aipaths-academy-content.git
-cd aipaths-academy-content
+/templates/                    # Templates for creating new content
+  doc-template.md
+  blog-template.md
+  CONTRIBUTING.md
+  README.md
 ```
 
-### 3. Create a Branch
+### Important Naming Convention
+
+All files use language suffixes:
+- English: `.en.md`
+- Spanish: `.es.md`
+
+The filename (without language suffix) becomes the URL slug, so:
+- `getting-started.en.md` → `/getting-started`
+- `getting-started.es.md` → `/getting-started`
+
+## How to Contribute
+
+### Quick Start
+
+1. **Fork this repository** on GitHub
+2. **Clone your fork** to your computer
+3. **Create/edit** files in the appropriate language folder
+4. **Use templates** from `/templates/` for structure
+5. **Commit and push** your changes
+6. **Create a pull request**
+
+### Adding New Documentation
+
+**Step 1:** Choose the right folder
+
+- **AI topics** (Claude, agents, MCP) → `/en/docs/ai/` or `/es/docs/ai/`
+- **Web development** → `/en/docs/web-dev/` or `/es/docs/web-dev/`
+- **Tools** → `/en/docs/tools/` or `/es/docs/tools/`
+
+**Step 2:** Copy the template
 
 ```bash
-git checkout -b feature/your-content-name
+cp templates/doc-template.md en/docs/ai/your-topic.en.md
 ```
 
-## 📝 Content Types
+**Step 3:** Fill in the frontmatter
 
-### Documentation
-
-Location: `/docs/{category}/`
-
-Categories:
-- `claude/` - Claude AI guides
-- `agents/` - AI Agents tutorials
-- `mcp/` - Model Context Protocol docs
-
-**Frontmatter Template:**
 ```yaml
 ---
-title: "Your Doc Title"
-description: "Brief description under 160 characters"
-category: "claude"
-order: 10
+title: "Your Document Title"
+description: "Brief description (max 160 characters)"
+tags: ["topic1", "topic2", "related-concept"]
 published: true
 lastUpdated: "2025-01-05"
 author: "Your Name"
-tags: ["claude", "tutorial", "beginner"]
 ---
 ```
 
-### Blog Posts
+**Important notes about frontmatter:**
+- `tags`: Use descriptive tags for search and organization (no rigid categories!)
+- `published`: Set to `false` for drafts
+- `lastUpdated`: Use ISO date format (YYYY-MM-DD)
+- `description`: Keep under 160 characters for SEO
 
-Location: `/blog/{locale}/`
+**Step 4:** Write your content
 
-Locales: `en/` (English), `es/` (Spanish)
+Follow the template structure. Key guidelines:
+- Use clear headings (H2 for main sections, H3 for subsections)
+- Include code examples with language tags
+- Add practical examples readers can try
+- Link to related content
 
-**Frontmatter Template:**
+**Step 5:** Create Spanish version (optional but encouraged)
+
+```bash
+cp en/docs/ai/your-topic.en.md es/docs/ai/your-topic.es.md
+```
+
+Then translate the content. Don't just use machine translation—review and adjust for natural language.
+
+### Adding Blog Posts
+
+**Step 1:** Copy the template
+
+```bash
+cp templates/blog-template.md en/blogs/your-post-title.en.md
+```
+
+**Step 2:** Fill in the frontmatter
+
 ```yaml
 ---
-title: "Your Post Title"
-description: "Compelling description 150-160 chars"
+title: "Your Engaging Blog Post Title"
+description: "Compelling description (150-160 characters)"
 author: "Your Name"
 publishedAt: "2025-01-05"
-category: "tutorial"
-tags: ["ai", "claude", "tutorial"]
+tags: ["topic1", "topic2", "tutorial"]
+readingTime: 8
 published: true
-featured: false
-locale: "en"
 ---
 ```
 
-### Code Examples
+**Step 3:** Write engaging content
 
-Location: `/docs/{category}/examples/`
+Blog posts should be:
+- **Personal**: Share your experience or perspective
+- **Practical**: Include code examples and real scenarios
+- **Actionable**: Give readers something to do or try
+- **Conversational**: Write like you're explaining to a friend
 
-**Requirements:**
-- Must be tested and working
-- Include comments explaining key parts
-- Follow language best practices
-- Include usage instructions
+### Editing Existing Content
 
-## ✍️ Writing Guidelines
+1. Find the file you want to edit
+2. Make your changes
+3. Update the `lastUpdated` date in frontmatter
+4. Commit with a clear message: `fix: Correct API endpoint in getting-started guide`
 
-### Language & Tone
+## Content Guidelines
 
-- **Clear & Concise**: Avoid jargon unless necessary
-- **Friendly**: Welcoming to beginners
-- **Practical**: Focus on real-world applications
-- **Professional**: No slang or overly casual language
+### Writing Style
 
-### Structure
-
-1. **Introduction** (2-3 paragraphs)
-   - Hook the reader
-   - Explain what they'll learn
-   - Set expectations
-
-2. **Prerequisites** (if applicable)
-   - Required knowledge
-   - Tools/accounts needed
-   - Estimated time
-
-3. **Main Content** (3-5 sections)
-   - Logical progression
-   - Clear headings
-   - Step-by-step instructions
-   - Code examples with explanations
-
-4. **Conclusion**
-   - Recap key points
-   - Next steps
-   - Related resources
+- **Clear and concise**: Avoid jargon unless necessary
+- **Beginner-friendly**: Explain concepts simply
+- **Practical**: Focus on real-world use cases
+- **Professional**: Maintain a respectful, helpful tone
 
 ### Formatting
 
-- Use **Markdown** (or MDX for advanced features)
-- H1 for title (one per document)
-- H2 for major sections
-- H3 for subsections
-- Code blocks with language specified:
-  ````markdown
-  ```typescript
-  const example = "code here";
-  ```
-  ````
-- Callouts for important notes:
-  ```markdown
-  > **Note**: Important information here
-  ```
+**Code Blocks:**
+Always specify the language:
 
-### Bilingual Content
-
-When providing both EN and ES:
-- Keep structure identical
-- Translate idioms appropriately
-- Maintain technical term consistency
-- Don't just use machine translation - review carefully
-
-## 💻 Code Examples
-
-### File Naming
-
+````markdown
+```typescript
+const example = "like this";
 ```
-docs/claude/examples/
-├── basic-chat.js              # Simple, descriptive names
-├── streaming-response.py       # Include key functionality
-└── mcp-server-setup.ts        # Kebab-case
+````
+
+**Callouts:**
+Use for important notes:
+
+```markdown
+> **Note**: Important information here
+
+> **Warning**: Critical security consideration
+
+> **Pro Tip**: Helpful shortcut or best practice
 ```
 
-### Code Style
+**Links:**
+- Use descriptive text: `[Claude API Documentation](https://docs.anthropic.com)`
+- Not: `[Click here](https://docs.anthropic.com)`
 
-**JavaScript/TypeScript:**
+### Tags vs. Categories
+
+**We use tags, not rigid categories.** This gives you flexibility:
+
+**Good tags:**
+- `["claude", "getting-started", "api", "beginner"]`
+- `["deployment", "vercel", "nextjs", "production"]`
+- `["agents", "context-window", "advanced"]`
+
+**What makes a good tag:**
+- Describes the content accurately
+- Helps users find related content
+- Specific enough to be useful
+- Common enough to group content
+
+**Avoid:**
+- Too many tags (4-6 is ideal)
+- Overly generic tags like "tutorial" alone
+- Tags that are too specific to be reused
+
+## Code Examples
+
+### Requirements
+
+All code examples must:
+- **Work**: Test before submitting
+- **Be clear**: Include comments explaining key parts
+- **Be complete**: Include necessary imports and setup
+- **Be secure**: No hardcoded secrets or API keys
+
+### Example Format
+
 ```typescript
 /**
  * Brief description of what this does
- * @param {string} input - Description
- * @returns {Promise<string>} - Description
  */
-async function exampleFunction(input: string): Promise<string> {
-  // Clear, descriptive variable names
-  const result = await someOperation(input);
+import { SomePackage } from 'package-name';
 
-  // Comments for complex logic
-  if (result.length > 100) {
-    return result.slice(0, 100);
+// Setup with environment variables
+const apiKey = process.env.API_KEY;
+
+async function exampleFunction() {
+  try {
+    // Explain what this block does
+    const result = await someOperation();
+    return result;
+  } catch (error) {
+    // Always include error handling
+    console.error('Operation failed:', error);
+    throw error;
   }
-
-  return result;
 }
 
-// Usage example
-const output = await exampleFunction("test input");
+// Show usage
+const output = await exampleFunction();
 console.log(output);
 ```
 
-**Include:**
-- ✅ Comments explaining WHY, not just WHAT
-- ✅ Error handling
-- ✅ Usage examples
-- ✅ Expected output (as comments)
-- ✅ Dependencies listed at top
+## Bilingual Content (EN/ES)
 
-**Avoid:**
-- ❌ Hardcoded secrets/API keys
-- ❌ Uncommented complex logic
-- ❌ Non-working or untested code
-- ❌ Overly complex examples
+When creating content in both languages:
 
-## 🔄 Submission Process
+### Structure
+- Keep file structure identical
+- Use same filename (just change `.en.md` to `.es.md`)
+- Match heading structure exactly
 
-### 1. Test Your Content
+### Translation
+- Don't rely solely on machine translation
+- Translate idioms and expressions appropriately
+- Keep technical terms consistent
+- Maintain the same tone and style
 
-- Check all code examples run correctly
-- Verify links work
-- Proofread for typos
-- Test on both EN and ES if bilingual
+### Code Examples
+- Keep code identical between languages
+- Translate comments and variable names if it aids understanding
+- Translate output/results shown in comments
 
-### 2. Commit Your Changes
+## Commit Message Format
 
-```bash
-git add .
-git commit -m "docs: Add guide on [topic]"
-```
+Use clear, descriptive commit messages:
 
-Commit message format:
-- `docs: ...` for documentation
-- `blog: ...` for blog posts
-- `examples: ...` for code samples
-- `fix: ...` for corrections
+- `docs: Add guide on Claude streaming responses`
+- `blog: Create tutorial for deploying Next.js apps`
+- `fix: Correct code example in getting-started guide`
+- `update: Refresh authentication guide with latest API`
 
-### 3. Push to Your Fork
+**Format:**
+- `docs:` - Documentation changes
+- `blog:` - Blog post additions/changes
+- `fix:` - Corrections or bug fixes
+- `update:` - Refresh existing content
+- `examples:` - Code example changes
 
-```bash
-git push origin feature/your-content-name
-```
+## Pull Request Process
 
-### 4. Create Pull Request
+### Before Submitting
 
-1. Go to the original repository
-2. Click "New Pull Request"
-3. Select your fork and branch
-4. Fill in the PR template:
-   - **Title**: Clear, descriptive
-   - **Description**: What you added/changed and why
-   - **Type**: Documentation, Blog, Example, Fix
-   - **Testing**: How you tested it
+- [ ] Test all code examples
+- [ ] Check all links work
+- [ ] Proofread for typos and grammar
+- [ ] Verify frontmatter is correct
+- [ ] Ensure `.en.md` / `.es.md` naming is consistent
 
-### 5. Review Process
+### PR Description
 
-- Maintainers will review within 3-5 days
-- Address any feedback
-- Once approved, content will be merged
-- Your contribution will go live automatically!
+Include:
+1. **What**: What content did you add/change?
+2. **Why**: Why is this valuable?
+3. **Testing**: How did you verify it works?
+4. **Notes**: Anything reviewers should know?
 
-## ❓ Questions?
+### Review Process
 
-- **General Questions**: [Open a Discussion](https://github.com/GonzaSab/aipaths-academy-content/discussions)
-- **Bug Reports**: [Open an Issue](https://github.com/GonzaSab/aipaths-academy-content/issues)
-- **Suggestions**: [Open an Issue](https://github.com/GonzaSab/aipaths-academy-content/issues)
+1. Maintainers review within 3-5 business days
+2. Address any feedback or requested changes
+3. Once approved, content is merged
+4. Changes go live automatically!
 
-## 🏆 Recognition
+## Working in Obsidian
 
-Contributors are credited in:
-- The content itself (author field)
-- Our contributors list
-- Changelog
+This repository is optimized for Obsidian editing:
 
-Thank you for helping make AI education accessible to everyone! 🙏
+### Workflow
+
+1. **Open vault**: Open the repository folder in Obsidian
+2. **Browse**: Navigate through language folders
+3. **Create/Edit**: Use templates, drag images, create links
+4. **Preview**: See how it looks in Obsidian's preview mode
+5. **Commit**: Use git in terminal or Obsidian git plugin
+
+### Visual Organization
+
+Topic folders (`/ai/`, `/web-dev/`, `/tools/`) are for **visual organization only**. They help you find files in Obsidian but don't affect URLs.
+
+### Obsidian Features
+
+Use standard markdown. Avoid Obsidian-specific features like:
+- `[[Wiki links]]` - Use `[standard markdown links](path)`
+- Dataview queries
+- Canvas files
+- Obsidian-specific plugins
+
+## Questions?
+
+- **General questions**: [Open a Discussion](https://github.com/GonzaSab/aipaths-academy-content/discussions)
+- **Bug reports**: [Open an Issue](https://github.com/GonzaSab/aipaths-academy-content/issues)
+- **Content suggestions**: [Open an Issue](https://github.com/GonzaSab/aipaths-academy-content/issues)
+
+## Recognition
+
+Contributors are credited:
+- In the `author` field of content
+- In our contributors list
+- In the project changelog
+
+Thank you for helping make AI education accessible to everyone!

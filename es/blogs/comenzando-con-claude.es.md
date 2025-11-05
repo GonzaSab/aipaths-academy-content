@@ -3,12 +3,9 @@ title: "Comenzando con Claude: Tu Primera Integración con IA"
 description: "Aprende a integrar Claude AI en tus aplicaciones con este tutorial para principiantes. Incluye ejemplos de código y mejores prácticas."
 author: "AIPaths Academy"
 publishedAt: "2025-01-05"
-updatedAt: "2025-01-05"
-category: "tutorial"
 tags: ["claude", "ia", "tutorial", "principiante"]
+readingTime: 10
 published: true
-featured: true
-locale: "es"
 ---
 
 # Comenzando con Claude: Tu Primera Integración con IA
@@ -119,7 +116,7 @@ Ejecútalo:
 node index.js
 ```
 
-🎉 **¡Felicitaciones!** ¡Acabas de hacer tu primera llamada a la API de Claude!
+¡Felicitaciones! ¡Acabas de hacer tu primera llamada a la API de Claude!
 
 ## Paso 4: Construyendo un Chatbot Simple
 
@@ -273,7 +270,7 @@ const response = await client.messages.create({
 Usa backoff exponencial para errores de API:
 
 ```javascript
-async function reintentar ConBackoff(fn, maxReintentos = 3) {
+async function reintentarConBackoff(fn, maxReintentos = 3) {
   for (let i = 0; i < maxReintentos; i++) {
     try {
       return await fn();
@@ -289,17 +286,10 @@ async function reintentar ConBackoff(fn, maxReintentos = 3) {
 
 ## Errores Comunes a Evitar
 
-❌ **No hagas**: Hardcodear claves API
-✅ **Haz**: Usar variables de entorno
-
-❌ **No hagas**: Ignorar el manejo de errores
-✅ **Haz**: Implementar bloques try/catch
-
-❌ **No hagas**: Enviar todo el historial de conversación cada vez
-✅ **Haz**: Truncar mensajes antiguos para gestionar tokens
-
-❌ **No hagas**: Olvidar establecer max_tokens
-✅ **Haz**: Siempre especificar límites razonables
+- No hardcodees claves API - Usa variables de entorno
+- No ignores el manejo de errores - Implementa bloques try/catch
+- No envíes todo el historial de conversación cada vez - Trunca mensajes antiguos para gestionar tokens
+- No olvides establecer max_tokens - Siempre especifica límites razonables
 
 ## ¿Qué Sigue?
 
@@ -309,13 +299,6 @@ Ahora que has construido tu primera integración con Claude, aquí hay algunas i
 2. **Implementa RAG** - Añade búsqueda en base de conocimiento
 3. **Usa Llamadas a Funciones** - Permite que Claude use herramientas
 4. **Prueba Visión** - Procesa imágenes con Claude
-
-## Recursos
-
-- [Repositorio de Código Completo](https://github.com/GonzaSab/aipaths-academy-content/tree/main/docs/claude/examples)
-- [Documentación API de Claude](https://docs.anthropic.com)
-- [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook)
-- [Únete a Nuestra Comunidad](https://discord.gg/aipaths-academy)
 
 ## Conclusión
 
@@ -332,5 +315,3 @@ Las posibilidades son infinitas. ¿Qué construirás con Claude?
 ---
 
 **¿Tienes preguntas?** Deja un comentario abajo o [abre un issue en GitHub](https://github.com/GonzaSab/aipaths-academy-content/issues)!
-
-**¿Quieres más tutoriales?** Suscríbete a nuestro newsletter para consejos semanales de desarrollo con IA.

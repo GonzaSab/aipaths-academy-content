@@ -801,7 +801,7 @@ Most successful AI startups don't start with the enterprise stack. Here's how to
 - Supabase for everything (DB + auth)
 - Single AI model (Gemini Flash)
 - Embedded Chroma for vectors
-- **Goal**: Validate idea with <$50/month
+- **Goal**: Validate idea with &lt;$50/month
 
 ### Phase 2: Product-Market Fit (Month 3-12)
 - Separate FastAPI backend
@@ -904,7 +904,7 @@ Answer these questions to get your recommended stack:
        └─→ NO → Continue...
 
 2. Budget?
-   └─→ <$100/month?
+   └─→ &lt;$100/month?
        └─→ YES → Use Stack 1 (MVP)
        └─→ $100-1000/month? → Continue...
        └─→ >$1000/month? → Consider Stack 3 (Enterprise)
@@ -916,7 +916,7 @@ Answer these questions to get your recommended stack:
        └─→ DevOps team? → Consider AWS (Stack 3)
 
 4. Scale expectations?
-   └─→ <1,000 users in 6 months?
+   └─→ &lt;1,000 users in 6 months?
        └─→ YES → Use Stack 1 (MVP)
        └─→ 1,000-100,000 users?
        └─→ YES → Use Stack 2 (Production)

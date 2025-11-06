@@ -163,6 +163,11 @@ const example = "like this";
 ```
 ````
 
+**CRITICAL - Valid Language Identifiers:**
+Never use placeholder text like `[language]` in code blocks. Use actual language names:
+- ✅ Good: `typescript`, `javascript`, `python`, `bash`, `json`, `yaml`, `text`, `markdown`
+- ❌ Bad: `[language]`, `[code]`, `your-language`
+
 **Callouts:**
 Use for important notes:
 
@@ -177,6 +182,174 @@ Use for important notes:
 **Links:**
 - Use descriptive text: `[Claude API Documentation](https://docs.anthropic.com)`
 - Not: `[Click here](https://docs.anthropic.com)`
+
+## MDX Compilation Rules (CRITICAL)
+
+Our documentation uses MDX, which combines Markdown with JSX. This means certain characters are interpreted as code. **Follow these rules to avoid compilation errors:**
+
+### 1. Comparison Operators MUST Be Escaped
+
+**The Problem:** MDX interprets `<` as the start of a JSX tag.
+
+**Examples that BREAK:**
+```markdown
+❌ Hardware with <16GB RAM
+❌ Response time <100ms
+❌ Budget <$50/month
+❌ Use for <10,000 users
+```
+
+**Correct Usage:**
+```markdown
+✅ Hardware with &lt;16GB RAM
+✅ Response time &lt;100ms
+✅ Budget &lt;$50/month
+✅ Use for &lt;10,000 users
+```
+
+**Rule:** Always replace `<` with `&lt;` when followed by a number or dollar sign in regular text.
+
+**Where This Applies:**
+- ✅ Regular text and paragraphs
+- ✅ List items (both ordered and unordered)
+- ✅ Inside code blocks (plain text, not fenced)
+- ✅ Headings
+- ✅ Table cells
+- ⚠️ Inside fenced code blocks (` ``` `), you can usually use `<` directly, but escape if you see errors
+
+### 2. Greater Than Operators
+
+**The Problem:** MDX can confuse `>` in certain contexts.
+
+**Safer Approach:**
+```markdown
+❌ Users >1000
+✅ Users &gt;1000
+
+❌ Memory >8GB
+✅ Memory &gt;8GB
+```
+
+**Rule:** When in doubt, escape `>` as `&gt;` in regular text.
+
+### 3. Curly Braces in Text
+
+**The Problem:** MDX interprets `{` and `}` as JavaScript expressions.
+
+**Examples that BREAK:**
+```markdown
+❌ The object {name: "value"} is invalid
+❌ Use the pattern {id} in your code
+```
+
+**Correct Usage:**
+```markdown
+✅ The object `{name: "value"}` is invalid  (wrapped in backticks)
+✅ Use the pattern \{id\} in your code      (escaped with backslash)
+```
+
+**Rule:** Wrap curly braces in backticks (inline code) or escape them with backslashes.
+
+### 4. Ampersands in URLs and Text
+
+**The Problem:** `&` is an HTML entity marker and can cause issues.
+
+**Examples:**
+```markdown
+⚠️ Use ?param1=value&param2=value  (might work but risky)
+✅ Use ?param1=value&amp;param2=value
+✅ Use `?param1=value&param2=value`  (in backticks is safe)
+```
+
+**Rule:** In regular text, use `&amp;` for ampersands. In code blocks or inline code, regular `&` is fine.
+
+### 5. HTML Comments
+
+**The Problem:** MDX processes HTML comments, which can cause issues.
+
+**Avoid:**
+```markdown
+❌ <!-- This is a comment -->
+```
+
+**Better:**
+```markdown
+✅ [//]: # (This is a comment)
+✅ Just delete the comment
+```
+
+**Rule:** Use Markdown-style comments `[//]: # (comment)` or remove comments entirely.
+
+### 6. Self-Closing Tags
+
+**The Problem:** Malformed self-closing tags cause errors.
+
+**Examples that BREAK:**
+```markdown
+❌ <Component/ >     (space before >)
+❌ <img src="x"/m>   (invalid character after /)
+```
+
+**Correct Usage:**
+```markdown
+✅ <Component />
+✅ <img src="x" />
+```
+
+**Rule:** Use proper JSX syntax for any HTML/JSX tags, or avoid them entirely in Markdown.
+
+### 7. Unescaped Hash in URLs
+
+**The Problem:** Hashes can interfere with heading syntax.
+
+**Safer Approach:**
+```markdown
+⚠️ Visit https://example.com#section
+✅ Visit <https://example.com#section>
+✅ Visit `https://example.com#section`
+✅ [Visit Link](https://example.com#section)
+```
+
+**Rule:** Wrap URLs containing `#` in angle brackets, backticks, or use proper link syntax.
+
+## Quick Reference: Characters to Watch
+
+| Character | When to Escape | HTML Entity | Example |
+|-----------|---------------|-------------|---------|
+| `<` | Before numbers/$ | `&lt;` | `&lt;100ms` |
+| `>` | Before numbers | `&gt;` | `&gt;1000` |
+| `&` | In text (not code) | `&amp;` | `Smith &amp; Co` |
+| `{` `}` | Always in text | Wrap in backticks | `` `{value}` `` |
+| `[` `]` | In code blocks | Use language name | `` ```text`` not `` ```[language]`` |
+
+## Testing Your Content
+
+Before submitting, check for these common issues:
+
+```bash
+# Search for potential MDX errors in your file
+grep -n "<[0-9$]" your-file.md      # Find unescaped < before numbers
+grep -n "\[language\]" your-file.md # Find placeholder languages
+grep -n "```\[" your-file.md        # Find invalid code blocks
+```
+
+## When You See MDX Errors
+
+If you encounter an error like:
+```
+[next-mdx-remote] error compiling MDX:
+Unexpected character `5` (U+0035) before name
+```
+
+This means:
+1. You have `<5` or similar in your text
+2. MDX thinks it's a JSX tag starting with a number (which is invalid)
+3. **Solution:** Replace `<` with `&lt;`
+
+**Other common errors:**
+- `Unknown language: '[language]'` → Use actual language name in code blocks
+- `Unexpected character after self-closing slash` → Fix malformed JSX/HTML tags
+- `Expected '>' to close the tag` → Missing closing bracket in HTML/JSX
 
 ### Tags vs. Categories
 

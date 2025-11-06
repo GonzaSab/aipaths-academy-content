@@ -382,7 +382,7 @@ Example usage:
 ```
 Review this [language] code as a senior developer:
 
-```[language]
+```text
 [paste code]
 ```
 
@@ -432,7 +432,7 @@ Context:
 - What I've tried: [previous attempts]
 
 Relevant code:
-```[language]
+```text
 [paste code]
 ```
 

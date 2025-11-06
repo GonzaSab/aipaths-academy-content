@@ -274,7 +274,7 @@ Given these constraints, [your request]
 CONSTRAINTS (Do not violate):
 - Must work in Node.js 16 (can't upgrade yet)
 - Cannot add new npm dependencies (corporate policy)
-- Must complete in <100ms (P99 latency requirement)
+- Must complete in &lt;100ms (P99 latency requirement)
 - Can't modify database schema (migration freeze)
 
 PREFERENCES (Nice to have):
@@ -421,7 +421,7 @@ This pattern cut my debugging time in half by ensuring Claude had all necessary 
 - Recent changes: [what changed before bug appeared]
 
 **Code:**
-```[language]
+```text
 [relevant code snippet]
 ```
 

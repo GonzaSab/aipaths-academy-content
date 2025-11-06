@@ -523,7 +523,7 @@ El speech-to-text funciona bien para inglés pero:
 
 ### Considera Esperar Si:
 
-⏸️ Estás en hardware limitado (<16GB RAM)
+⏸️ Estás en hardware limitado (&lt;16GB RAM)
 ⏸️ Trabajas principalmente en tareas simples de un solo archivo
 ⏸️ Estás a mitad de proyecto y preocupado por interrupción
 ⏸️ Prefieres flujos de trabajo establecidos y probados

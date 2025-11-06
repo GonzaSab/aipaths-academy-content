@@ -850,7 +850,7 @@ Hablemos de números. Esto es lo que cuesta ejecutar este chatbot en producción
 2. **Reducir top_k**: Menos fragmentos recuperados = menores costos de Claude
 3. **Usar Claude Haiku para consultas simples**: 10x más económico para preguntas directas
 4. **Procesamiento por lotes**: Actualizar embeddings semanalmente, no en tiempo real
-5. **Auto-alojar vectores**: Usar Chroma en lugar de Pinecone para <10K docs
+5. **Auto-alojar vectores**: Usar Chroma en lugar de Pinecone para &lt;10K docs
 
 ## Mejorar Tu Chatbot
 

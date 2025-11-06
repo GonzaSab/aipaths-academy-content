@@ -523,7 +523,7 @@ Speech-to-text works well for English but:
 
 ### Consider Waiting If:
 
-⏸️ You're on limited hardware (<16GB RAM)
+⏸️ You're on limited hardware (&lt;16GB RAM)
 ⏸️ You primarily work on simple, single-file tasks
 ⏸️ You're mid-project and worried about disruption
 ⏸️ You prefer established, proven workflows

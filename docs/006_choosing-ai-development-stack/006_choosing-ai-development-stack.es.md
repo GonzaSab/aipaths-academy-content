@@ -801,7 +801,7 @@ La mayoría de startups de IA exitosas no comienzan con el stack empresarial. As
 - Supabase para todo (BD + auth)
 - Modelo IA único (Gemini Flash)
 - Chroma embebido para vectores
-- **Meta**: Validar idea con <$50/mes
+- **Meta**: Validar idea con &lt;$50/mes
 
 ### Fase 2: Product-Market Fit (Mes 3-12)
 - Backend FastAPI separado
@@ -904,7 +904,7 @@ Responde estas preguntas para obtener tu stack recomendado:
        └─→ NO → Continúa...
 
 2. ¿Presupuesto?
-   └─→ ¿<$100/mes?
+   └─→ ¿&lt;$100/mes?
        └─→ SÍ → Usa Stack 1 (MVP)
        └─→ ¿$100-1000/mes? → Continúa...
        └─→ ¿>$1000/mes? → Considera Stack 3 (Empresarial)
@@ -916,7 +916,7 @@ Responde estas preguntas para obtener tu stack recomendado:
        └─→ ¿Equipo DevOps? → Considera AWS (Stack 3)
 
 4. ¿Expectativas de escala?
-   └─→ ¿<1,000 usuarios en 6 meses?
+   └─→ ¿&lt;1,000 usuarios en 6 meses?
        └─→ SÍ → Usa Stack 1 (MVP)
        └─→ ¿1,000-100,000 usuarios?
        └─→ SÍ → Usa Stack 2 (Producción)

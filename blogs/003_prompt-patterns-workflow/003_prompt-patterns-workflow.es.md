@@ -274,7 +274,7 @@ Dadas estas restricciones, [tu solicitud]
 RESTRICCIONES (No violar):
 - Debe funcionar en Node.js 16 (no podemos actualizar aún)
 - No se pueden añadir nuevas dependencias npm (política corporativa)
-- Debe completarse en <100ms (requisito de latencia P99)
+- Debe completarse en &lt;100ms (requisito de latencia P99)
 - No se puede modificar esquema de base de datos (congelamiento de migración)
 
 PREFERENCIAS (Sería bueno tener):

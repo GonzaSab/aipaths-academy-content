@@ -615,7 +615,7 @@ serve(async (req) => {
   });
 });
 
-// Cold start: <100ms
+// Cold start: &lt;100ms
 // Usa runtime Deno
 // TypeScript nativo
 ```

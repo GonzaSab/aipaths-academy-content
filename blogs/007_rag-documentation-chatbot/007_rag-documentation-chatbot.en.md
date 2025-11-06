@@ -850,7 +850,7 @@ Let's talk numbers. Here's what running this chatbot costs in production:
 2. **Reduce top_k**: Fewer retrieved chunks = lower Claude costs
 3. **Use Claude Haiku for simple queries**: 10x cheaper for straightforward questions
 4. **Batch processing**: Update embeddings weekly, not real-time
-5. **Self-host vectors**: Use Chroma instead of Pinecone for <10K docs
+5. **Self-host vectors**: Use Chroma instead of Pinecone for &lt;10K docs
 
 ## Improving Your Chatbot
 

@@ -647,8 +647,7 @@ Improve this prompt:
 Help me with my website.
 ```
 
-<details>
-<summary>Solution</summary>
+**Solution:**
 
 ```
 I'm building an e-commerce website with React and Node.js. The product page loads slowly (5+ seconds) when displaying 100+ items.
@@ -660,7 +659,6 @@ Help me:
 
 Focus on frontend rendering performance and API response times.
 ```
-</details>
 
 ### Exercise 2: Adding Structure
 
@@ -669,8 +667,7 @@ Restructure this prompt using XML tags:
 I need to migrate data from MySQL to PostgreSQL but I'm worried about downtime and we have 10GB of data and some complex triggers and stored procedures that might not be compatible.
 ```
 
-<details>
-<summary>Solution</summary>
+**Solution:**
 
 ```xml
 <task>Migrate database from MySQL to PostgreSQL</task>
@@ -694,7 +691,6 @@ I need to migrate data from MySQL to PostgreSQL but I'm worried about downtime a
 4. Rollback plan
 </deliverables>
 ```
-</details>
 
 ### Exercise 3: Providing Examples
 
@@ -702,8 +698,7 @@ Write a prompt with examples to extract structured data from natural language:
 
 Input: "Schedule a meeting with John next Tuesday at 3pm about the Q4 budget"
 
-<details>
-<summary>Solution</summary>
+**Solution:**
 
 ```
 Extract meeting details from natural language into JSON format.
@@ -730,7 +725,6 @@ Output: {
 Now extract from:
 Input: "Book a conference room for the team standup every Monday at 9am"
 ```
-</details>
 
 ## Tools and Resources
 

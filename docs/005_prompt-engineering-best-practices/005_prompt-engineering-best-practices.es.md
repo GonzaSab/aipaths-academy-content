@@ -647,8 +647,7 @@ Mejora este prompt:
 Ayúdame con mi sitio web.
 ```
 
-<details>
-<summary>Solución</summary>
+**Solución:**
 
 ```
 Estoy construyendo un sitio web de e-commerce con React y Node.js. La página de producto carga lentamente (5+ segundos) al mostrar más de 100 artículos.
@@ -660,7 +659,6 @@ Ayúdame a:
 
 Enfócate en rendimiento de renderizado frontend y tiempos de respuesta de API.
 ```
-</details>
 
 ### Ejercicio 2: Añadiendo Estructura
 
@@ -669,8 +667,7 @@ Reestructura este prompt usando etiquetas XML:
 Necesito migrar datos de MySQL a PostgreSQL pero me preocupa el tiempo de inactividad y tenemos 10GB de datos y algunos triggers y procedimientos almacenados complejos que podrían no ser compatibles.
 ```
 
-<details>
-<summary>Solución</summary>
+**Solución:**
 
 ```xml
 <tarea>Migrar base de datos de MySQL a PostgreSQL</tarea>
@@ -694,7 +691,6 @@ Necesito migrar datos de MySQL a PostgreSQL pero me preocupa el tiempo de inacti
 4. Plan de rollback
 </entregables>
 ```
-</details>
 
 ### Ejercicio 3: Proporcionando Ejemplos
 
@@ -702,8 +698,7 @@ Escribe un prompt con ejemplos para extraer datos estructurados de lenguaje natu
 
 Entrada: "Programa una reunión con Juan el próximo martes a las 3pm sobre el presupuesto Q4"
 
-<details>
-<summary>Solución</summary>
+**Solución:**
 
 ```
 Extrae detalles de reunión de lenguaje natural a formato JSON.
@@ -730,7 +725,6 @@ Salida: {
 Ahora extrae de:
 Entrada: "Reserva una sala de conferencias para el standup del equipo cada lunes a las 9am"
 ```
-</details>
 
 ## Herramientas y Recursos
 

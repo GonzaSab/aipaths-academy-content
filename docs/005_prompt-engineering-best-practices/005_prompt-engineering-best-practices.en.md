@@ -544,16 +544,16 @@ Create reusable templates for common tasks:
 
 ````markdown
 ## Code Review Template
-Review this {language} code for {specific_focus}:
+Review this \{language\} code for \{specific_focus\}:
 
-```{language}
-{code_here}
+```\{language\}
+\{code_here\}
 ```
 
 Highlight:
-1. {focus_area_1}
-2. {focus_area_2}
-3. {focus_area_3}
+1. \{focus_area_1\}
+2. \{focus_area_2\}
+3. \{focus_area_3\}
 
 Format: Table with Issue | Severity | Fix
 ````

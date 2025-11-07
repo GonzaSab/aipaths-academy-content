@@ -544,16 +544,16 @@ Crea plantillas reutilizables para tareas comunes:
 
 ````markdown
 ## Plantilla de Revisión de Código
-Revisa este código en {lenguaje} para {enfoque_específico}:
+Revisa este código en \{lenguaje\} para \{enfoque_específico\}:
 
-```{lenguaje}
-{código_aquí}
+```\{lenguaje\}
+\{código_aquí\}
 ```
 
 Destaca:
-1. {área_enfoque_1}
-2. {área_enfoque_2}
-3. {área_enfoque_3}
+1. \{área_enfoque_1\}
+2. \{área_enfoque_2\}
+3. \{área_enfoque_3\}
 
 Formato: Tabla con Problema | Severidad | Corrección
 ````

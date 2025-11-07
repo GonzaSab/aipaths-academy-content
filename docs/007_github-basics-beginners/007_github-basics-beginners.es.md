@@ -966,7 +966,7 @@ git pull origin main
 git stash pop
 ```
 
-### Problema 4: "Conflicto de fusión en `<archivo>`"
+### Problema 4: "Conflicto de fusión en `&lt;archivo&gt;`"
 
 **Causa:** Las mismas líneas modificadas en dos ramas
 
@@ -976,7 +976,7 @@ git stash pop
 3. Elige qué versión mantener
 4. Elimina marcadores de conflicto
 5. Guarda archivo
-6. `git add <archivo>`
+6. `git add &lt;archivo&gt;`
 7. `git commit -m "Resolver conflicto de fusión"`
 
 ### Problema 5: "Falló enviar algunas refs"

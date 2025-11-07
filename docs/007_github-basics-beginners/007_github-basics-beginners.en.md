@@ -966,7 +966,7 @@ git pull origin main
 git stash pop
 ```
 
-### Issue 4: "Merge conflict in <file>"
+### Issue 4: "Merge conflict in &lt;file&gt;"
 
 **Cause:** Same lines modified in two branches
 
@@ -976,7 +976,7 @@ git stash pop
 3. Choose which version to keep
 4. Remove conflict markers
 5. Save file
-6. `git add <file>`
+6. `git add &lt;file&gt;`
 7. `git commit -m "Resolve merge conflict"`
 
 ### Issue 5: "Failed to push some refs"

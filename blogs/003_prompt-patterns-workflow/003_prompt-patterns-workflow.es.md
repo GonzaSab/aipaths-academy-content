@@ -422,7 +422,7 @@ Este patrón redujo mi tiempo de depuración a la mitad al asegurar que Claude t
 - Cambios recientes: [qué cambió antes de que apareciera el bug]
 
 **Código:**
-```[lenguaje]
+```text
 [fragmento de código relevante]
 ```
 

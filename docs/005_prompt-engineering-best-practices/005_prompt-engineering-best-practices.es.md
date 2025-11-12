@@ -483,7 +483,7 @@ Para cada pregunta:
 ### 4. No Proporcionar Ejemplos
 
 **Problema:** "Parsea estos datos a un mejor formato"
-**Mejor:** "Parsea estos datos CSV a JSON. Ejemplo: 'Juan,Pérez,25' → {"nombre": "Juan", "apellido": "Pérez", "edad": 25}"
+**Mejor:** "Parsea estos datos CSV a JSON. Ejemplo: 'Juan,Pérez,25' → `{"nombre":` "Juan", "apellido": "Pérez", "edad": 25}`"
 
 ### 5. Ignorar Formato de Salida
 

@@ -11,6 +11,8 @@ author: "Your Name"
 
 Brief introduction explaining what this document covers and who it's for. Keep it concise (2-3 paragraphs max).
 
+> **Important**: Use H2 (`##`) for all main sections below. Only H2 headings appear in the "On This Page" sidebar navigation. Use H3 (`###`) for subsections within each H2.
+
 ## Prerequisites
 
 If applicable, list what readers need before starting:

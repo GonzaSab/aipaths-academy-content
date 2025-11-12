@@ -483,7 +483,7 @@ For each question:
 ### 4. Not Providing Examples
 
 **Problem:** "Parse this data into a better format"
-**Better:** "Parse this CSV data into JSON. Example: 'John,Doe,25' → {"firstName": "John", "lastName": "Doe", "age": 25}"
+**Better:** "Parse this CSV data into JSON. Example: 'John,Doe,25' → `{"firstName":` "John", "lastName": "Doe", "age": 25}`"
 
 ### 5. Ignoring Output Format
 

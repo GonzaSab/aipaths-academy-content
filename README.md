@@ -9,6 +9,29 @@ This repository contains all the educational content for AIPaths Academy:
 - **Documentation** - Comprehensive guides on Claude AI, AI Agents, MCP, and more
 - **Blog Posts** - Tutorials, articles, and insights
 - **Templates** - Ready-to-use templates for creating new content
+- **Validation** - Automated content quality checking
+
+## Quick Start
+
+### Before You Commit
+
+Always validate your content:
+
+```bash
+# Validate all content
+npm run validate
+
+# Validate specific file
+npm run validate:file docs/001_my-doc/001_my-doc.en.md
+
+# Validate only changed files
+npm run validate:changed
+```
+
+The validator checks for:
+- 🔴 **Errors** - Issues that break the website
+- 🟡 **Warnings** - Quality problems that should be fixed
+- 💡 **Info** - Enhancement suggestions
 
 ## Languages
 

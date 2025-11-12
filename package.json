@@ -1,0 +1,18 @@
+{
+  "name": "aipaths-academy-content",
+  "version": "1.0.0",
+  "description": "Content repository for AIPaths Academy documentation and blog posts",
+  "scripts": {
+    "validate": "node scripts/validate-content.js",
+    "validate:file": "node scripts/validate-content.js",
+    "validate:changed": "node scripts/validate-content.js --changed"
+  },
+  "keywords": [
+    "documentation",
+    "content",
+    "markdown",
+    "mdx"
+  ],
+  "author": "AIPaths Academy",
+  "license": "MIT"
+}

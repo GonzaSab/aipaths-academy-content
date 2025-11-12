@@ -14,6 +14,8 @@ Start with a hook—an interesting fact, question, or story that draws readers i
 
 Explain what this post covers and what value readers will get. Be specific about outcomes.
 
+> **Important**: Use H2 (`##`) for all main sections below. Only H2 headings appear in the "On This Page" sidebar navigation. Use H3 (`###`) for subsections within each H2.
+
 **What you'll learn:**
 - Key takeaway 1
 - Key takeaway 2

@@ -152,6 +152,82 @@ Blog posts should be:
 - **Practical**: Focus on real-world use cases
 - **Professional**: Maintain a respectful, helpful tone
 
+### Heading Structure (Critical for Navigation)
+
+**Our "On This Page" sidebar only tracks H2 headings (`##`).** Follow this structure for proper navigation:
+
+**Document Structure:**
+```markdown
+# Document Title (H1 - Only once at the top)
+
+Brief introduction paragraph.
+
+## Main Section 1 (H2 - Appears in "On This Page")
+
+Content for main section.
+
+### Subsection 1.1 (H3 - Does NOT appear in sidebar)
+
+Detailed content within the section.
+
+### Subsection 1.2 (H3 - Does NOT appear in sidebar)
+
+More detailed content.
+
+## Main Section 2 (H2 - Appears in "On This Page")
+
+Next major topic.
+
+### Subsection 2.1 (H3)
+
+Supporting details.
+```
+
+**Best Practices:**
+
+✅ **DO:**
+- Use **one H1 (`#`)** only - the document title at the top
+- Use **H2 (`##`)** for all main sections that should appear in the "On This Page" sidebar
+- Use **H3 (`###`)** for subsections within an H2 section
+- Keep H2 headings descriptive and scannable (2-6 words ideal)
+- Maintain logical hierarchy: H1 → H2 → H3 (don't skip levels)
+
+❌ **DON'T:**
+- Use multiple H1 headings in one document
+- Skip from H1 directly to H3 without H2
+- Use H3 for main sections (they won't appear in sidebar)
+- Create H2 headings that are too long (>8 words)
+- Use special characters that break URL anchors (emojis, slashes, etc.)
+
+**Example of Good Heading Structure:**
+```markdown
+# Getting Started with Claude API
+
+## Prerequisites
+### System Requirements
+### Account Setup
+
+## Authentication
+### API Key Generation
+### Environment Variables
+
+## Your First Request
+### Basic Example
+### Handling Responses
+
+## Error Handling
+### Common Errors
+### Debugging Tips
+
+## Next Steps
+```
+
+**Why This Matters:**
+- Users navigate docs via the "On This Page" sidebar
+- Only H2 headings appear in the sidebar for clean navigation
+- Proper hierarchy improves accessibility and SEO
+- Consistent structure makes docs easier to scan
+
 ### Formatting
 
 **Code Blocks:**
@@ -428,6 +504,147 @@ When creating content in both languages:
 - Keep code identical between languages
 - Translate comments and variable names if it aids understanding
 - Translate output/results shown in comments
+
+## Content Validation
+
+**Before committing**, always validate your content to catch errors early:
+
+```bash
+# Validate all content
+npm run validate
+
+# Validate specific file
+npm run validate:file docs/001_my-doc/001_my-doc.en.md
+
+# Validate only changed files (git)
+npm run validate:changed
+```
+
+### What Gets Validated
+
+The validation script checks for three levels of issues:
+
+#### 🔴 **ERRORS** (Must Fix - Blocks Deployment)
+- **Single H1 heading**: Only document title should be H1
+- **Required frontmatter**: Must have `title`, `description`, `tags`
+- **Valid locale**: Filename must end with `.en.md` or `.es.md`
+- **MDX syntax**: No unescaped `<`, `>`, `{}` outside code blocks
+- **Code block languages**: No placeholder `[language]` tags
+
+#### 🟡 **WARNINGS** (Should Fix - Quality Issues)
+- **H2 count**: At least 3 H2 sections for good navigation
+- **Heading hierarchy**: Don't skip levels (H1→H3)
+- **H2 length**: Keep H2 headings under 8 words
+- **Description length**: Under 160 characters for SEO
+- **Tag count**: 4-8 tags recommended
+- **Empty sections**: No headings without content
+
+#### 💡 **INFO** (Nice to Fix - Suggestions)
+- **Code language**: Specify language for syntax highlighting
+- **Reading time**: Very short (<2 min) or long (>20 min) content
+
+### Reading Validation Output
+
+```bash
+$ npm run validate
+
+🔍 AIPaths Academy Content Validator
+════════════════════════════════════════════════════════════════════════════════
+
+Validating 2 files...
+
+✅ docs/003_superclaude/003_superclaude.en.md
+
+────────────────────────────────────────────────────────────────────────────────
+📄 docs/001_my-doc/001_my-doc.en.md
+────────────────────────────────────────────────────────────────────────────────
+  🔴 ERROR: Multiple H1 headings found (2). Only the document title should be H1. (line 45)
+  🟡 WARNING: Only 2 H2 sections found. Recommended: 3+ for "On This Page" navigation.
+  💡 INFO: Code block without language specified. Consider adding for syntax highlighting. (line 78)
+
+════════════════════════════════════════════════════════════════════════════════
+
+📊 Summary:
+  ✅ 1 file passed
+  ❌ 1 file with issues
+  🔴 1 error
+  🟡 1 warning
+  💡 1 info
+
+❌ Validation failed with errors.
+```
+
+### Common Validation Errors and Fixes
+
+**Error: "Multiple H1 headings found"**
+```markdown
+❌ WRONG:
+# My Document Title
+## Section 1
+# Section 2  ← Second H1
+
+✅ CORRECT:
+# My Document Title
+## Section 1
+## Section 2  ← Changed to H2
+```
+
+**Error: "Unescaped < before number"**
+```markdown
+❌ WRONG:
+Hardware with <16GB RAM
+
+✅ CORRECT:
+Hardware with &lt;16GB RAM
+# OR
+Hardware with `<16GB` RAM
+```
+
+**Error: "Invalid code block language"**
+````markdown
+❌ WRONG:
+```[language]
+code here
+```
+
+✅ CORRECT:
+```typescript
+code here
+```
+````
+
+**Error: "Missing required frontmatter field"**
+```yaml
+❌ WRONG:
+---
+title: "My Doc"
+---
+
+✅ CORRECT:
+---
+title: "My Doc"
+description: "Clear description under 160 chars"
+tags: ["tag1", "tag2", "tag3", "tag4"]
+published: true
+lastUpdated: "2025-01-12"
+author: "Your Name"
+---
+```
+
+### When to Run Validation
+
+1. **Before committing**: Catches issues early
+2. **After AI generation**: Verifies AI-created content
+3. **After bulk edits**: Ensures consistency
+4. **Before submitting PR**: Final quality check
+
+### Validation Best Practices
+
+- ✅ **Run often**: Validate as you write, not just at the end
+- ✅ **Fix errors first**: Address 🔴 errors before warnings
+- ✅ **Review warnings**: Quality improvements are worth it
+- ✅ **Check info**: Enhancement suggestions improve UX
+- ✅ **Commit clean**: Don't commit files with errors
 
 ## Commit Message Format
 

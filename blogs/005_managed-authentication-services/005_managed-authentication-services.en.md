@@ -3,7 +3,7 @@ title: You're Probably Wasting Time Building Auth (Here's What Smart Developers 
 description: Stop reinventing the wheel. Discover how services like Supabase and Firebase let you add secure authentication to your app in 15 minutes instead of 3 weeks.
 coverImage: https://raw.githubusercontent.com/GonzaSab/aipaths-academy-content/main/public/images/blogs/005_managed-authentication-services/hero.jpg
 author: AIPaths Academy
-publishedAt: 2025-11-01
+publishedAt: 2025-11-06
 tags:
   - authentication
   - security

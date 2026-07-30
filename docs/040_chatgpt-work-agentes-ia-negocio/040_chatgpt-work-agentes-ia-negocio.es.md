@@ -1,12 +1,12 @@
 ---
-content_id: "blogs-chatgpt-work-agentes-ia-negocio"
+content_id: "docs-chatgpt-work-agentes-ia-negocio"
 locale: "es"
 title: "ChatGPT Work, Codex, Projects y tareas: guía completa"
 description: "Guía completa para entender ChatGPT Work, Codex, Projects y Scheduled Tasks, y elegir entre flujos locales o cloud según tu trabajo y permisos."
 author: "AIPaths Academy"
 publishedAt: "2026-07-30T16:42:24Z"
 updatedAt: "2026-07-30T16:42:24Z"
-coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/chatgpt-work-agentes-ia-negocio/hero.png"
+coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/docs/040_chatgpt-work-agentes-ia-negocio/hero.png"
 tags:
   - chatgpt
   - codex

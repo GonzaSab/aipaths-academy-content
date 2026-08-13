@@ -9,7 +9,7 @@ updatedAt: "2026-03-22T12:18:41.890Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/023_perplexity-personal-computer-vs-openclaw/hero.png"
 tags:
   - ai-agents
-  - OpenClaw
+  - openclaw
   - news
   - perplexity
 readingTime: 3

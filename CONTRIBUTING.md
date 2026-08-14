@@ -2,6 +2,12 @@
 
 Thank you for your interest in contributing! This repository is designed to be simple and easy to use—you can edit in Obsidian, your favorite text editor, or directly on GitHub.
 
+> **Spanish-only policy (GON-150):** new content ships as `.es.md` only. Do not
+> create a new `.en.md` counterpart. Existing EN files stay published and
+> untouched — they're legacy, not required. The rest of this doc still shows
+> EN+ES examples because that's the existing corpus; treat "both locales"
+> notes below as applying only when an EN file already exists.
+
 ## Repository Structure
 
 This repository uses a content-first structure with numeric prefixes for ordering:
@@ -92,7 +98,7 @@ updatedAt: "2025-01-05T10:00:00Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/docs/004_your-topic/hero.jpg"
 
 # Tags (canonical lowercase English IDs)
-# IMPORTANT: Both EN/ES versions MUST have IDENTICAL tags
+# IMPORTANT: if an EN version exists, both EN/ES versions MUST have IDENTICAL tags
 tags:
   - beginner
   - claude
@@ -106,17 +112,17 @@ tags:
   - Can include lowercase letters, numbers, and hyphens
   - Must start with `docs-` prefix
   - Examples: `docs-ai-agents-guide`, `docs-claude-3-5-sonnet`
-  - Links EN/ES versions together
-  - Must be identical in both language files
+  - Links EN/ES versions together when both exist
+  - Must be identical in both language files, if an EN file exists
 - `locale`: Must match filename extension (`.en.md` → `"en"`, `.es.md` → `"es"`)
 - `tags`: Use canonical lowercase English tags (see tagging guide in CLAUDE.md)
-  - **CRITICAL**: Both EN/ES versions must have IDENTICAL tags
+  - **CRITICAL**: if an EN version exists, both EN/ES versions must have IDENTICAL tags
   - Include one difficulty level: beginner, intermediate, or advanced
   - 4-8 tags recommended
 - `publishedAt` / `updatedAt`: Use ISO 8601 format with time
   - Format: `"YYYY-MM-DDTHH:MM:SSZ"` (e.g., `"2025-01-15T10:00:00Z"`)
   - **CRITICAL**: Must include full timestamp (not just date)
-  - Both EN/ES versions must have same `publishedAt`
+  - If an EN version exists, both EN/ES versions must have the same `publishedAt`
   - `updatedAt` can differ if translation lags
 - `coverImage`: Always include (use default if needed)
 - `description`: Keep under 160 characters for SEO
@@ -174,7 +180,7 @@ updatedAt: "2025-01-05T10:00:00Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/002_your-post-title/hero.jpg"
 
 # Tags (canonical lowercase English IDs)
-# IMPORTANT: Both EN/ES versions MUST have IDENTICAL tags
+# IMPORTANT: if an EN version exists, both EN/ES versions MUST have IDENTICAL tags
 tags:
   - cursor
   - ai-coding

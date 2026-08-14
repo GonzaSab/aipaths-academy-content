@@ -29,8 +29,6 @@ tags:
   - workflows
 ---
 
-# Claude Skills: La Guía Completa para Personalizar Flujos de Trabajo con IA
-
 Los Skills son una de las funcionalidades más poderosas de Claude—sin embargo, la mayoría de los usuarios no saben que existen.
 
 Piensa en los Skills como "modos" especializados que Claude puede activar cuando los necesita. En lugar de explicar tus preferencias en cada conversación, los Skills te permiten enseñarle a Claude tus flujos de trabajo una vez y hacer que los aplique automáticamente.

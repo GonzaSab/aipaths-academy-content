@@ -23,8 +23,6 @@ coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-conte
 tags: ["ai-agents", "rag", "guide", "n8n", "automation", "vector-database"]
 ---
 
-# Guía Completa de RAG: 4 Métodos para Conectar tus Agentes con Datos
-
 Cuando tu agente de IA no responde correctamente, el problema casi siempre está en **cómo accede a los datos**. Esta guía te enseña los 4 métodos principales de RAG (Retrieval-Augmented Generation) y cuándo usar cada uno para obtener respuestas precisas.
 
 > **Importante**: No todo necesita una base de datos vectorial. Elegir el método correcto puede hacer tu agente más rápido, más barato y más preciso.

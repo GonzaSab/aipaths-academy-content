@@ -28,8 +28,6 @@ tags:
   - beginner
 ---
 
-# Prompt Engineering para Claude: Mejores Prácticas
-
 Obtener excelentes resultados de Claude no es magia—es una habilidad. La diferencia entre una respuesta mediocre y una excepcional a menudo se reduce a cómo haces la pregunta. Esto es prompt engineering: la práctica de crear entradas que guían a los modelos de IA para producir exactamente lo que necesitas.
 
 En esta guía completa, aprenderás los principios fundamentales, técnicas probadas y patrones prácticos que los desarrolladores profesionales usan para aprovechar al máximo Claude. Ya sea que estés construyendo aplicaciones de producción o simplemente quieras mejor productividad personal, dominar estas habilidades transformará cómo trabajas con IA.

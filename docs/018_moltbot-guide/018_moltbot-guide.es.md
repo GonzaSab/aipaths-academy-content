@@ -24,8 +24,6 @@ tags: ["intermediate", "ai-agents", "automation", "claude", "tools", "guide"]
 
 ---
 
-# Molt Bot: Guia del Agente de IA Autonomo
-
 Una guia conceptual para desarrolladores que quieren entender Molt Bot antes de ejecutarlo.
 
 ## Que es Molt Bot?

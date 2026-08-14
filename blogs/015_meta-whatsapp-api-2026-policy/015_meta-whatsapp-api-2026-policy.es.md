@@ -31,8 +31,6 @@ tags:
 readingTime: 6
 ---
 
-# API de WhatsApp Business: Cambios de Politica de Meta en 2026
-
 Meta acaba de hacer uno de sus movimientos mas controversiales: prohibir chatbots de IA de proposito general en WhatsApp mientras posiciona a Meta AI como el asistente exclusivo de la plataforma. Con investigaciones antimonopolio abiertas en la UE, Italia y Brasil, aqui esta todo lo que necesitas saber.
 
 **Lo que aprenderas:**

@@ -28,8 +28,6 @@ tags:
   - collaboration
 ---
 
-# Fundamentos de GitHub: Guía para Principiantes sobre Control de Versiones
-
 ¿Alguna vez has eliminado código importante por accidente? ¿Sobrescrito un archivo que funcionaba perfectamente? ¿Luchado para colaborar con compañeros en el mismo proyecto sin crear conflictos?
 
 Estos son problemas que todo desarrollador enfrenta—y el control de versiones con GitHub los resuelve todos.

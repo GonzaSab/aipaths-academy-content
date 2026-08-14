@@ -13,7 +13,6 @@ tags:
   - developer-tools
   - github
 ---
-# Claude Code Routines: cómo automatizar trabajo técnico sin convertir tu repo en una caja negra
 
 Claude Code Routines permite guardar una instrucción para que Claude Code trabaje de forma automática en la nube. En vez de abrir una sesión manual cada vez, defines una rutina con contexto, acceso a repositorios y un disparador: horario, API o evento de GitHub.
 

@@ -17,8 +17,6 @@ tags:
 readingTime: 10
 ---
 
-# iOS 27 puede convertir el iPhone en un selector de modelos de IA
-
 Apple parece estar preparando un cambio importante para iOS 27: que el usuario pueda elegir qué modelo de IA quiere usar dentro de funciones del sistema como Siri, Writing Tools o Image Playground.
 
 La noticia, reportada originalmente por Bloomberg y recogida por TechCrunch, Reuters, Engadget y Mashable, dice que Apple está probando una función interna llamada **Extensions**. La idea sería que apps instaladas en el dispositivo puedan ofrecer sus capacidades de IA generativa a Apple Intelligence, para que el usuario elija entre modelos de terceros como Google Gemini, Claude de Anthropic o, potencialmente, ChatGPT.

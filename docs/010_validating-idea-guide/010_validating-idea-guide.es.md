@@ -29,8 +29,6 @@ tags:
   - solopreneurs
 ---
 
-# Validar Tu Idea Antes de Construir: Una Guía Basada en Frameworks
-
 **Tienes una idea. ¿Y ahora qué?**
 
 Ya hiciste el trabajo difícil de [encontrar tu nicho](https://www.aipaths.academy/es/docs/008_finding-profitable-niche-guide). Identificaste una audiencia específica con un problema urgente. Estás emocionado. Quieres empezar a construir.

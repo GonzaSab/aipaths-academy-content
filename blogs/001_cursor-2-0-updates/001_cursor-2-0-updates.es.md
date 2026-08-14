@@ -34,8 +34,6 @@ tags:
 readingTime: 10
 ---
 
-# Cursor 2.0: La Revolución del Código IA Que Cambia Todo
-
 El 29 de octubre de 2025, Cursor lanzó una bomba que cambió fundamentalmente el código asistido por IA. Cursor 2.0 no es solo una actualización—es una reimaginación completa de cómo los desarrolladores trabajan con IA.
 
 Las características principales: un modelo IA propietario llamado Composer que es 4x más rápido que alternativas comparables, arquitectura multi-agente que ejecuta hasta 8 agentes IA en paralelo, y un conjunto de características que transforman Cursor de un editor mejorado con IA a una plataforma completa de desarrollo agéntico.

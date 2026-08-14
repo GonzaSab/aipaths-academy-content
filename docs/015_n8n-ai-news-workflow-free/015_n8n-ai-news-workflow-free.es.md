@@ -23,8 +23,6 @@ coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-conte
 tags: ["n8n", "automation", "ai", "tutorial", "api", "free-tools", "ai-cli"]
 ---
 
-# Crea un Digest de Noticias IA Gratis con n8n, REST API y Cualquier CLI de IA
-
 Aprende a construir un sistema de digest de noticias completamente automatizado y potenciado por IA que se ejecuta diariamente, selecciona las 5 noticias más importantes de IA, y las envía a tu bandeja de entrada - todo sin pagar por plataformas de automatización costosas.
 
 Esta guía te muestra cómo usar **cualquier herramienta CLI de IA** para crear programáticamente flujos de trabajo de n8n via REST API, dándote control completo sobre tu infraestructura de automatización.

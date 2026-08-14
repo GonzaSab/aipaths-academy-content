@@ -29,8 +29,6 @@ tags:
   - claude
 ---
 
-# Framework SuperClaude
-
 SuperClaude es un framework de configuración de meta-programación que transforma Claude Code de un editor de código básico a una plataforma de desarrollo estructurada con agentes inteligentes y capacidades de automatización de flujos de trabajo.
 
 ## ¿Qué es SuperClaude?

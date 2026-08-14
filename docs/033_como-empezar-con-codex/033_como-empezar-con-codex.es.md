@@ -13,7 +13,6 @@ tags:
   - workflows
   - automation
 ---
-# Cómo empezar con Codex: guía para delegar trabajo real a un agente de IA
 
 Hay una diferencia enorme entre pedirle ayuda a una IA y delegarle una parte del trabajo.
 

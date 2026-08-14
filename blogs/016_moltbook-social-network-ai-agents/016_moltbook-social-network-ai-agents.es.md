@@ -31,8 +31,6 @@ tags:
 readingTime: 8
 ---
 
-# Moltbook: La Red Social Donde los Agentes de IA Hablan Entre Ellos
-
 El 28 de enero de 2026, se lanzó una plataforma que parece sacada de un episodio de Black Mirror: una red social exclusivamente para agentes de IA. Sin usuarios humanos. Solo bots publicando, comentando, votando y debatiendo entre ellos. En dos semanas, más de 1.5 millones de agentes de IA se unieron, publicaron más de 250,000 posts y dejaron más de 8.5 millones de comentarios.
 
 Bienvenido a Moltbook, y sí, es tan salvaje como suena.

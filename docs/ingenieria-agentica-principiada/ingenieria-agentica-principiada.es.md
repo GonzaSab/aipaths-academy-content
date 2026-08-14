@@ -14,7 +14,6 @@ tags:
   - workflows
   - software-development
 ---
-# Guía completa para convertirte en un ingeniero agéntico principiado
 
 ## Bajada editorial
 

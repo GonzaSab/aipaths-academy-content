@@ -70,7 +70,7 @@ Check existing folders in `/docs/` to find the highest number (e.g., if last is 
 ```bash
 # If the last folder is 003_superclaude, use 004_
 mkdir docs/004_your-topic
-cp templates/doc-template.md docs/004_your-topic/004_your-topic.en.md
+cp templates/doc-template.md docs/004_your-topic/004_your-topic.es.md
 ```
 
 **Step 3:** Fill in the frontmatter
@@ -80,8 +80,8 @@ cp templates/doc-template.md docs/004_your-topic/004_your-topic.en.md
 # Unique semantic identifier (links EN/ES versions)
 content_id: "docs-your-topic"
 
-# Locale (must match filename: .en.md or .es.md)
-locale: "en"
+# Locale (must match filename: .es.md, or .en.md for legacy content)
+locale: "es"
 
 # SEO & Display
 title: "Your Document Title"
@@ -135,14 +135,13 @@ Follow the template structure. Key guidelines:
 - Add practical examples readers can try
 - Link to related content
 
-**Step 5:** Create Spanish version (optional but encouraged)
+**Step 5:** Stop here — Spanish is the published version
 
-```bash
-# Create Spanish version in the same folder
-cp docs/004_your-topic/004_your-topic.en.md docs/004_your-topic/004_your-topic.es.md
-```
+AIPaths publishes Spanish-only. Do **not** create an English counterpart for new
+content: no `.en.md` file, no translation, no placeholder. Existing English
+files stay exactly as they are; they are frozen, not deleted.
 
-Then translate the content. Don't just use machine translation—review and adjust for natural language.
+See `docs/SPANISH-ONLY.md` in the website repo for the policy and the rollback plan.
 
 ### Adding Blog Posts
 
@@ -152,7 +151,7 @@ Then translate the content. Don't just use machine translation—review and adju
 # Check existing folders in /blogs/ for the highest number
 # If the last folder is 001_getting-started, use 002_
 mkdir blogs/002_your-post-title
-cp templates/blog-template.md blogs/002_your-post-title/002_your-post-title.en.md
+cp templates/blog-template.md blogs/002_your-post-title/002_your-post-title.es.md
 ```
 
 **Step 2:** Fill in the frontmatter
@@ -162,8 +161,8 @@ cp templates/blog-template.md blogs/002_your-post-title/002_your-post-title.en.m
 # Unique semantic identifier (links EN/ES versions)
 content_id: "blogs-your-post-title"
 
-# Locale (must match filename: .en.md or .es.md)
-locale: "en"
+# Locale (must match filename: .es.md, or .en.md for legacy content)
+locale: "es"
 
 # SEO & Display
 title: "Your Engaging Blog Post Title"
@@ -560,20 +559,22 @@ const output = await exampleFunction();
 console.log(output);
 ```
 
-## Bilingual Content (EN/ES)
+## Legacy English Content (EN)
 
-When creating content in both languages:
+AIPaths publishes Spanish-only. New content is `.es.md` and has no English
+counterpart. This section applies **only** to the English files that already
+exist.
 
-### Structure
-- Keep file structure identical
-- Use same filename (just change `.en.md` to `.es.md`)
-- Match heading structure exactly
+### Frozen, not deleted
+- Do not create new `.en.md` files
+- Do not translate new Spanish content into English
+- Do not rewrite, empty or delete existing English files — they stay published
+  and are kept for a possible future reactivation
 
-### Translation
-- Don't rely solely on machine translation
-- Translate idioms and expressions appropriately
-- Keep technical terms consistent
-- Maintain the same tone and style
+### If an existing pair is inconsistent
+- Tag and timestamp drift between an existing EN/ES pair is reported as a
+  notice, never as an error. Fixing it would mean rewriting frozen English, so
+  leave it alone unless Gonza asks for that specific piece.
 
 ### Code Examples
 - Keep code identical between languages
@@ -601,7 +602,7 @@ node scripts/validate-content.js --changed
 ### What Gets Validated
 
 #### Translation Consistency (`validate-translations.js`)
-- ✅ EN and ES versions exist for each `content_id`
+- ✅ A Spanish version exists for each `content_id` (English is optional legacy)
 - ✅ Shared fields match between EN/ES:
   - `content_id` (must be identical)
   - `tags` (must be identical arrays)
@@ -622,7 +623,7 @@ The validation script checks for three levels of issues:
 - **Valid locale**: Filename must end with `.en.md` or `.es.md`
 - **Locale match**: `locale` field must match filename extension
 - **content_id format**: Must be `blogs-*` or `docs-*` (lowercase, kebab-case, can include numbers)
-- **Tags consistency**: EN/ES pairs must have identical tags
+- **Tags consistency**: reported when an EN/ES pair disagrees, but never blocking — frozen English is not rewritten
 - **MDX syntax**: No unescaped `<`, `>`, `{}` outside code blocks
 - **Code block languages**: No placeholder `[language]` tags
 
@@ -772,7 +773,7 @@ Use clear, descriptive commit messages:
 - [ ] Check all links work
 - [ ] Proofread for typos and grammar
 - [ ] Verify frontmatter is correct
-- [ ] Ensure `.en.md` / `.es.md` naming is consistent
+- [ ] Ensure the file is named `.es.md` and `locale: "es"` matches it
 
 ### PR Description
 

@@ -8,11 +8,11 @@ publishedAt: "2026-06-15T19:00:00.000Z"
 updatedAt: "2026-06-15T19:00:00.000Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/propaganda-ia-pentagono-america-latina/hero.png"
 tags:
-  - ai_security
-  - influence_operations
-  - ai_content
-  - latin_america
-  - media_trust
+  - ai-security
+  - influence-operations
+  - ai-content
+  - latin-america
+  - media-trust
 readingTime: 8
 ---
 The La Tilde case matters not because it is a brilliant operation. It matters for the opposite reason: it shows that AI propaganda does not need to be perfect to be useful.

@@ -1,10 +1,12 @@
 ---
-# Unique semantic identifier (links EN/ES versions)
+# Unique semantic identifier (stable across locales; keep it if an
+# English legacy file exists in the same folder)
 # Format: blogs-kebab-case-title (no numbers)
 content_id: "blogs-your-blog-title"
 
-# Locale (MUST match file extension: .en.md or .es.md)
-locale: "en"
+# Locale (MUST match file extension). New content is Spanish-only:
+# use .es.md and "es". ".en.md"/"en" is legacy and not created any more.
+locale: "es"
 
 # SEO & Display
 title: "Your Engaging Blog Post Title"
@@ -22,7 +24,7 @@ updatedAt: "2025-01-15T10:00:00Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/XXX_folder-name/hero.jpg"
 
 # Tags (4-8 recommended, use canonical lowercase English IDs)
-# IMPORTANT: Both EN/ES versions MUST have IDENTICAL tags
+# If a legacy English counterpart exists, its tags are left as they are
 # See TAG_GUIDELINES.md for full list
 tags: ["cursor", "ai-coding", "tutorial", "productivity"]
 

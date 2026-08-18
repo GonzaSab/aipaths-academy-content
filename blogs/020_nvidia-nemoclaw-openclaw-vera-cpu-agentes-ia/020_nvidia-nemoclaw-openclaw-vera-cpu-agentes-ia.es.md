@@ -9,7 +9,7 @@ updatedAt: "2026-03-17T16:24:14.706Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/020_nvidia-nemoclaw-openclaw-vera-cpu-agentes-ia/hero.png?v=1773775782"
 tags:
   - ai-agents
-  - OpenClaw
+  - openclaw
   - news
   - nvidia
 readingTime: 5

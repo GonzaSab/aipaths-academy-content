@@ -1,10 +1,12 @@
 ---
-# Unique semantic identifier (links EN/ES versions)
+# Unique semantic identifier (stable across locales; keep it if an
+# English legacy file exists in the same folder)
 # Format: docs-kebab-case-title (no numbers)
 content_id: "docs-your-document-title"
 
-# Locale (MUST match file extension: .en.md or .es.md)
-locale: "en"
+# Locale (MUST match file extension). New content is Spanish-only:
+# use .es.md and "es". ".en.md"/"en" is legacy and not created any more.
+locale: "es"
 
 # SEO & Display
 title: "Your Document Title"
@@ -23,7 +25,7 @@ updatedAt: "2025-01-15T10:00:00Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/docs/XXX_folder-name/hero.jpg"
 
 # Tags (4-8 recommended, use canonical lowercase English IDs)
-# IMPORTANT: Both EN/ES versions MUST have IDENTICAL tags
+# If a legacy English counterpart exists, its tags are left as they are
 # Include: 1 difficulty level (beginner/intermediate/advanced)
 #          1 primary technology, 1 content type, 1-3 key concepts
 # See TAG_GUIDELINES.md for full list

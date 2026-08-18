@@ -35,39 +35,40 @@ The validator checks for:
 
 ## Languages
 
-All content is available in:
-- English (`/en/`)
-- Spanish (`/es/`)
+AIPaths publishes **Spanish-only**. New content is written in Spanish and has no
+English counterpart. English files that already exist stay published and frozen:
+they are never rewritten, emptied or deleted.
 
 ## Repository Structure
 
+Content is organised as one folder per piece, with the locale in the filename.
+There are no `/en/` or `/es/` root folders.
+
 ```
-/en/                           # English content
-  /docs/                       # Documentation
-    001_ai-agents-guide.en.md
-    002_claude-context-window.en.md
-    003_superclaude.en.md
-  /blogs/                      # Blog posts
+/docs/                                   # Documentation
+  001_ai-agents-guide/
+    001_ai-agents-guide.es.md            # published Spanish version
+    001_ai-agents-guide.en.md            # legacy English, frozen
+  026_your-new-topic/
+    026_your-new-topic.es.md             # new content: Spanish only
+
+/blogs/                                  # Blog posts
+  001_getting-started-with-claude/
+    001_getting-started-with-claude.es.md
     001_getting-started-with-claude.en.md
 
-/es/                           # Spanish content
-  /docs/                       # Documentation (Spanish versions)
-    001_ai-agents-guide.es.md
-    002_claude-context-window.es.md
-    003_superclaude.es.md
-  /blogs/                      # Blog posts (Spanish versions)
-    001_comenzando-con-claude.es.md
-
-/templates/                    # Content templates
+/templates/                              # Content templates
   doc-template.md
   blog-template.md
 ```
 
 ### How It Works
 
-- **Language folders** (`/en/`, `/es/`) organize content by language
+- **One folder per piece** holds every locale of that content
 - **Numeric prefixes** (`001_`, `002_`, `003_`) control the display order
-- **Filenames** use language suffixes: `.en.md` or `.es.md`
+- **Filenames** use language suffixes: `.es.md` for new content, `.en.md` for legacy
+- **`content_id`** is derived from the folder name and links the locales, so an
+  English file may carry a different slug than its Spanish counterpart
 - **URLs** are generated from the filename (without prefix and language suffix)
   - Example: `001_getting-started.en.md` → `/getting-started`
 
@@ -184,34 +185,27 @@ We use **flexible tags** instead of rigid categories:
 3. **Commit** - Push to your fork
 4. **Submit PR** - Request review and merge
 
-### Bilingual Content
+### Language
 
-Creating content in both languages:
-
-1. Create English version first: `your-doc.en.md`
-2. Copy to Spanish: `cp your-doc.en.md your-doc.es.md`
-3. Translate thoughtfully (not just machine translation)
-4. Keep structure identical between languages
+Write the Spanish version and stop there. Do not create an `.en.md` file for new
+content, and do not translate new Spanish content into English. Existing English
+files are frozen — leave them exactly as they are.
 
 ## Examples
 
 ### Adding a New Guide
 
 ```bash
-# 1. Determine the next number (check existing files in /en/docs/)
-# If last file is 003_superclaude.en.md, use 004_
+# 1. Determine the next number (check existing folders in /docs/)
+# If the last folder is 003_superclaude, use 004_
 
-# 2. Copy template with numeric prefix
-cp templates/doc-template.md en/docs/004_claude-streaming.en.md
+# 2. Create the folder and copy the template
+mkdir docs/004_claude-streaming
+cp templates/doc-template.md docs/004_claude-streaming/004_claude-streaming.es.md
 
-# 3. Edit the file (fill in frontmatter, write content)
+# 3. Edit the file (fill in frontmatter, write content in Spanish)
 
-# 4. Create Spanish version
-cp en/docs/004_claude-streaming.en.md es/docs/004_claude-streaming.es.md
-
-# 5. Translate Spanish version
-
-# 6. Commit
+# 4. Commit
 git add .
 git commit -m "docs: Add guide on Claude streaming responses"
 git push
@@ -220,13 +214,14 @@ git push
 ### Adding a Blog Post
 
 ```bash
-# 1. Determine the next number (check existing files in /en/blogs/)
-# If last file is 001_getting-started-with-claude.en.md, use 002_
+# 1. Determine the next number (check existing folders in /blogs/)
+# If the last folder is 001_getting-started-with-claude, use 002_
 
-# 2. Copy template with numeric prefix
-cp templates/blog-template.md en/blogs/002_my-first-ai-app.en.md
+# 2. Create the folder and copy the template
+mkdir blogs/002_my-first-ai-app
+cp templates/blog-template.md blogs/002_my-first-ai-app/002_my-first-ai-app.es.md
 
-# 3. Write your post
+# 3. Write your post in Spanish
 
 # 4. Commit
 git add .

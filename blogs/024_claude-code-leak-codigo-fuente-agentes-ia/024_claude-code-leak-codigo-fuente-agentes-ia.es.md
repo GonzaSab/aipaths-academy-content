@@ -10,7 +10,7 @@ coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-conte
 tags:
   - claude
   - ai-agents
-  - OpenClaw
+  - openclaw
   - news
 readingTime: 7
 ---

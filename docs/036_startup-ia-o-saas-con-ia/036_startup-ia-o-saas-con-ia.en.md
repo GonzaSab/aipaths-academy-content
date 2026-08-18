@@ -7,9 +7,9 @@ author: "AIPaths Academy"
 publishedAt: "2026-06-01T19:15:19.848Z"
 updatedAt: "2026-06-01T19:15:19.848Z"
 tags:
-  - ai_business
+  - ai-business
   - saas
-  - emprendimiento_ia
+  - emprendimiento-ia
   - producto
   - moat
 ---

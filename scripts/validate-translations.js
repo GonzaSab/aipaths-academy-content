@@ -288,15 +288,18 @@ function validateContent(contentDir, verbose = false) {
   // Step 2: Validate EN/ES pairs
   for (const [contentId, data] of contentMap.entries()) {
     // Check both versions exist
+    // Spanish-only policy: ES is what gets published, EN is frozen legacy.
+    // A missing English file is expected and must never block; a missing
+    // Spanish file is a real problem worth failing on.
     if (!data.en) {
       warnings.push({
         contentId,
-        message: 'Missing English version',
+        message: 'Spanish-only (no English file) — expected under Spanish-only policy',
       });
     }
 
     if (!data.es) {
-      warnings.push({
+      errors.push({
         contentId,
         message: 'Missing Spanish version',
       });
@@ -313,7 +316,10 @@ function validateContent(contentDir, verbose = false) {
         const esValue = JSON.stringify(esFrontmatter[field]);
 
         if (enValue !== esValue) {
-          errors.push({
+          // Under the Spanish-only freeze the English file is never rewritten,
+          // so a divergence inside an existing pair cannot be fixed without
+          // breaking the freeze. Report it, do not block on it.
+          warnings.push({
             contentId,
             message: `Field "${field}" doesn't match between EN/ES\n    EN: ${enValue}\n    ES: ${esValue}`,
           });

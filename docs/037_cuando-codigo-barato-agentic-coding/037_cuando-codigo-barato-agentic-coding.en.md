@@ -7,11 +7,11 @@ author: "AIPaths Academy"
 publishedAt: "2026-06-04T12:07:35.395Z"
 updatedAt: "2026-06-04T12:07:35.395Z"
 tags:
-  - agentic_coding
-  - desarrollo_ia
-  - agentes_ia
+  - agentic-coding
+  - desarrollo-ia
+  - agentes-ia
   - software
-  - spec_driven_development
+  - spec-driven-development
 ---
 ## Core idea
 

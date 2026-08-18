@@ -8,11 +8,11 @@ publishedAt: "2026-06-15T19:00:00.000Z"
 updatedAt: "2026-06-15T19:00:00.000Z"
 coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-content/main/public/images/blogs/propaganda-ia-pentagono-america-latina/hero.png"
 tags:
-  - ai_security
-  - influence_operations
-  - ai_content
-  - latin_america
-  - media_trust
+  - ai-security
+  - influence-operations
+  - ai-content
+  - latin-america
+  - media-trust
 readingTime: 8
 ---
 El caso La Tilde no importa porque sea una operación brillante. Importa por lo contrario: porque muestra que la propaganda con IA no necesita ser perfecta para ser útil.

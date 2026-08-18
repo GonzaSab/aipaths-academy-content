@@ -201,6 +201,30 @@ function parseFrontmatter(content) {
   return frontmatter;
 }
 
+// Matches a fence marker line (```lang or plain ```), capturing its length and info string.
+function matchFence(line) {
+  const match = line.trim().match(/^(`{3,})(.*)$/);
+  if (!match) return null;
+  return { length: match[1].length, info: match[2].trim() };
+}
+
+// CommonMark fences don't nest: a fence only closes on a marker of the same
+// character with length >= the opening fence's and no info string. Anything
+// else encountered while open (e.g. a shorter/info-bearing ``` inside a
+// ```markdown example) is just content, not a new block boundary.
+function trackCodeFence(state, line) {
+  const fence = matchFence(line);
+  if (!fence) return false;
+
+  if (state.open === null) {
+    state.open = fence.length;
+  } else if (fence.length >= state.open && fence.info === '') {
+    state.open = null;
+  }
+
+  return true;
+}
+
 function normalizeTitleForComparison(value) {
   return String(value || '')
     .replace(/^#+\s+/, '')
@@ -213,7 +237,7 @@ function normalizeTitleForComparison(value) {
 
 function validateHeadingStructure(content, frontmatter, result) {
   const lines = content.split('\n');
-  let inCodeBlock = false;
+  const fenceState = { open: null };
   let h1Count = 0;
   let h1Line = null;
   const headings = [];
@@ -222,12 +246,9 @@ function validateHeadingStructure(content, frontmatter, result) {
     const lineNum = index + 1;
 
     // Track code blocks
-    if (line.trim().startsWith('```')) {
-      inCodeBlock = !inCodeBlock;
-      return;
-    }
+    if (trackCodeFence(fenceState, line)) return;
 
-    if (inCodeBlock) return;
+    if (fenceState.open !== null) return;
 
     // Check for headings
     const h1Match = line.match(/^#\s+[^#]/);
@@ -346,29 +367,28 @@ function validateLocale(filePath, frontmatter, result) {
 
 function validateMDXSyntax(content, result) {
   const lines = content.split('\n');
-  let inCodeBlock = false;
+  const fenceState = { open: null };
 
   lines.forEach((line, index) => {
     const lineNum = index + 1;
 
     // Track code blocks
-    if (line.trim().startsWith('```')) {
-      inCodeBlock = !inCodeBlock;
-      return;
-    }
+    if (trackCodeFence(fenceState, line)) return;
 
-    if (inCodeBlock) return;
+    if (fenceState.open !== null) return;
 
-    // ERROR: Unescaped < before numbers or $
-    if (line.match(/<\s*(\d|\$)/)) {
+    // ERROR: Unescaped < immediately before numbers or $ (a space before the
+    // digit, e.g. "puntaje < 0.7", reads as a comparison, not a JSX tag)
+    if (line.match(/<(\d|\$)/)) {
       result.addError(
         'Unescaped "<" before number/dollar sign. Use &lt; or wrap in backticks.',
         lineNum
       );
     }
 
-    // ERROR: Unescaped curly braces in text
-    if (line.match(/[^`]{[^`]+}[^`]/) && !line.trim().startsWith('```')) {
+    // ERROR: Unescaped curly braces in text (braces preceded by "\" are a
+    // valid MDX escape, e.g. "\{\{nombre\}\}", and shouldn't be flagged)
+    if (line.match(/[^`\\]\{[^`]+\}[^`]/) && !line.trim().startsWith('```')) {
       const match = line.match(/({[^}]+})/);
       if (match) {
         result.addError(

@@ -17,8 +17,6 @@ tags:
 readingTime: 10
 ---
 
-# iOS 27 could turn the iPhone into an AI model selector
-
 Apple appears to be preparing a major shift for iOS 27: letting users choose which AI model they want to use inside system features like Siri, Writing Tools, or Image Playground.
 
 The news, originally reported by Bloomberg and later picked up by TechCrunch, Reuters, Engadget, and Mashable, says Apple is testing an internal feature called **Extensions**. The idea is that apps installed on the device could offer their generative AI capabilities to Apple Intelligence, so users can choose between third-party models like Google Gemini, Anthropic's Claude, or potentially ChatGPT.

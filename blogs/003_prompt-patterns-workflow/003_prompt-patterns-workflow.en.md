@@ -32,8 +32,6 @@ tags:
 readingTime: 12
 ---
 
-# 10 Prompt Patterns That Changed My Claude Workflow
-
 Six months ago, I was frustrated with Claude. Half my prompts needed multiple iterations, responses were inconsistent, and I spent more time clarifying than actually getting work done. Sound familiar?
 
 Then I discovered something: the problem wasn't Claude—it was how I was talking to it.

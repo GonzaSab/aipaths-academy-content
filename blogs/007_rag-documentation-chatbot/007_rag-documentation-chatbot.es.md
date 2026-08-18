@@ -32,8 +32,6 @@ tags:
 readingTime: 15
 ---
 
-# Construye un Chatbot de Documentación con Claude y RAG
-
 La documentación suele estar dispersa en Notion, Confluence, Google Docs y múltiples wikis. Los desarrolladores pasan horas buscando respuestas que deberían tomar segundos. ¿Te suena familiar?
 
 Los estudios muestran que los equipos de desarrollo desperdician entre un 20-40% de su tiempo buscando información. Preguntas como "¿Cómo me autentico con nuestra API de pagos?" o "¿Cuál es el patrón de manejo de errores para tareas en segundo plano?" no deberían requerir revisar docenas de documentos.

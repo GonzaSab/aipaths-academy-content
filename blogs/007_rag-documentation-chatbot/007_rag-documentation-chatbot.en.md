@@ -32,8 +32,6 @@ tags:
 readingTime: 15
 ---
 
-# Build a Documentation Chatbot with Claude and RAG
-
 Documentation is often scattered across Notion, Confluence, Google Docs, and multiple wikis. Developers spend hours searching for answers that should take seconds. Sound familiar?
 
 Studies show that development teams waste an estimated 20-40% of their time searching for information. Questions like "How do I authenticate with our payment API?" or "What's the error handling pattern for background jobs?" shouldn't require digging through dozens of documents.

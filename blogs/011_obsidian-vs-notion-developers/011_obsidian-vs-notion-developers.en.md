@@ -32,8 +32,6 @@ tags:
 readingTime: 10
 ---
 
-# Obsidian vs Notion: Why Developers Choose Markdown
-
 If you're a developer using Notion, you've probably hit these pain points: your notes are locked in a proprietary format, you can't version control them with git, and integrating them into your terminal workflow feels like fighting upstream. Meanwhile, your code lives in plain text files that are fast, portable, and work with any tool you throw at them.
 
 **The question isn't which tool is "better"—it's which one fits how developers actually work.**

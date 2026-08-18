@@ -31,8 +31,6 @@ tags:
 readingTime: 5
 ---
 
-# Jeff Bezos Regresa como CEO: Lanzando Project Prometheus, una Startup de IA de $6.2B para la Economía Física
-
 Jeff Bezos está de vuelta en la silla de CEO. Por primera vez desde que dejó Amazon en 2021, el empresario multimillonario está asumiendo un rol de liderazgo operativo—esta vez como co-CEO de una nueva empresa de inteligencia artificial llamada **Project Prometheus**.
 
 ## ¿Qué es Project Prometheus?

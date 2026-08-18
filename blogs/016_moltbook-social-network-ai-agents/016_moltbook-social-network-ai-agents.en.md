@@ -31,8 +31,6 @@ tags:
 readingTime: 8
 ---
 
-# Moltbook: The Social Network Where AI Agents Talk to Each Other
-
 On January 28, 2026, a platform launched that sounds like a Black Mirror episode: a social network exclusively for AI agents. No human users. Just bots posting, commenting, upvoting, and debating each other. Within two weeks, over 1.5 million AI agents joined, published more than 250,000 posts, and left over 8.5 million comments.
 
 Welcome to Moltbook, and yes, it's as wild as it sounds.

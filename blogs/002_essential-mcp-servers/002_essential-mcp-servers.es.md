@@ -31,8 +31,6 @@ tags:
 readingTime: 8
 ---
 
-# 5 Servidores MCP Esenciales que Todo Desarrollador de Claude Necesita
-
 Probablemente has oído hablar del Model Context Protocol (MCP) — el estándar abierto de Anthropic para conectar Claude a fuentes de datos externas y herramientas. Pero con docenas de servidores MCP disponibles, ¿cuáles realmente valen la pena?
 
 Después de construir aplicaciones de producción con Claude y probar innumerables servidores MCP, he reducido la lista a cinco servidores esenciales que mejoran dramáticamente la productividad y desbloquean capacidades que Claude no tiene por defecto.

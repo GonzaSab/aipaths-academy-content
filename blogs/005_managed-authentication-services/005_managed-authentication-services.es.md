@@ -32,8 +32,6 @@ tags:
 readingTime: 8
 ---
 
-# Probablemente Estás Perdiendo Tiempo Construyendo Autenticación (Esto es lo que Hacen los Desarrolladores Inteligentes)
-
 Imagina esto: Estás construyendo la app de tus sueños. La idea es brillante, el mercado está listo, y estás emocionado por lanzarla. Pero primero, necesitas que los usuarios inicien sesión.
 
 "¿Qué tan difícil puede ser la autenticación?" piensas. Famosas últimas palabras.

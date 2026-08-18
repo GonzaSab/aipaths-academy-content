@@ -32,8 +32,6 @@ tags:
 readingTime: 8
 ---
 
-# You're Probably Wasting Time Building Auth (Here's What Smart Developers Do Instead)
-
 Picture this: You're building your dream app. The idea is brilliant, the market is ready, and you're excited to ship. But first, you need users to log in.
 
 "How hard can authentication be?" you think. Famous last words.

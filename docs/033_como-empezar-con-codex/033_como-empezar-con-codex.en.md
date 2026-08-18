@@ -13,8 +13,6 @@ tags:
   - workflows
   - automation
 ---
-# How to get started with Codex: a guide to delegating real work to an AI agent
-
 There is a big difference between asking AI for help and delegating part of the work to it.
 
 When you use ChatGPT in the traditional way, you usually write a question, get an answer, and decide what to do with it. That can already be very useful: it helps you think, organize ideas, explain concepts, or answer questions. But most of the work is still on your side. You copy, paste, open files, make changes, test, fix issues, and decide the next step.

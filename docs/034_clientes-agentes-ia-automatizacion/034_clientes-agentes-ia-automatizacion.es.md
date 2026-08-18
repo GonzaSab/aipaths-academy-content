@@ -14,7 +14,6 @@ tags:
   - workflows
   - entrepreneurship
 ---
-# Cómo encontrar clientes para agentes de IA y automatizaciones
 
 La mayoría de builders que crean agentes de IA cometen el mismo error: buscan “empresas que necesiten IA”. Ese mercado es demasiado amplio, demasiado ruidoso y demasiado abstracto.
 

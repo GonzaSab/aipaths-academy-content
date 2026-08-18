@@ -32,8 +32,6 @@ tags:
 readingTime: 12
 ---
 
-# 10 Patrones de Prompts Que Cambiaron Mi Flujo de Trabajo con Claude
-
 Hace seis meses, estaba frustrado con Claude. La mitad de mis prompts necesitaban múltiples iteraciones, las respuestas eran inconsistentes, y pasaba más tiempo aclarando que realmente haciendo trabajo. ¿Te suena familiar?
 
 Entonces descubrí algo: el problema no era Claude—era cómo le estaba hablando.

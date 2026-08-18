@@ -28,8 +28,6 @@ tags:
   - intermediate
 ---
 
-# Construyendo Tu Primer Servidor MCP: Guía Completa
-
 Si has estado trabajando con Claude y quieres extender sus capacidades con herramientas personalizadas, fuentes de datos o integraciones, el Model Context Protocol (MCP) es tu respuesta. MCP es un protocolo abierto que estandariza cómo las aplicaciones de IA se conectan a sistemas externos—piénsalo como un puerto USB-C para IA.
 
 En esta guía, aprenderás qué es MCP, cómo funciona, y construirás tu primer servidor MCP desde cero. Al final, tendrás un servidor de clima funcional que Claude puede usar para obtener datos meteorológicos en tiempo real.

@@ -33,8 +33,6 @@ tags:
 readingTime: 18
 ---
 
-# Supabase vs Firebase: ¿Cuál deberías elegir en 2025?
-
 El panorama de Backend-as-a-Service en 2025 tiene dos líderes claros: Firebase de Google y el retador de código abierto Supabase. Con Firebase lanzando capacidades de búsqueda vectorial y mejoras multi-región, y Supabase superando los 1.7 millones de desarrolladores con una valoración de $2 mil millones, esta elección importa más que nunca.
 
 He lanzado aplicaciones en producción en ambas plataformas. Firebase se sintió mágico al principio—autenticación funcionando en minutos, sincronización en tiempo real con cero configuración. Luego choqué con los límites. Migré a Supabase para mi siguiente proyecto. ¿La diferencia? **Firebase cambia control por conveniencia. Supabase te da ambos, pero solo si conoces SQL.**

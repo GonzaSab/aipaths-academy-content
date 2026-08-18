@@ -29,8 +29,6 @@ tags:
   - workflows
 ---
 
-# Claude Skills: The Complete Guide to Customizing AI Workflows
-
 Skills are one of Claude's most powerful features—yet most users don't know they exist.
 
 Think of Skills as specialized "modes" that Claude can activate when needed. Instead of explaining your preferences every conversation, Skills let you teach Claude your workflows once and have it apply them automatically.

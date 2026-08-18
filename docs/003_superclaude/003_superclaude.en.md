@@ -29,8 +29,6 @@ tags:
   - claude
 ---
 
-# SuperClaude Framework
-
 SuperClaude is a meta-programming configuration framework that transforms Claude Code from a basic code editor into a structured development platform with intelligent agents and workflow automation capabilities.
 
 ## What is SuperClaude?

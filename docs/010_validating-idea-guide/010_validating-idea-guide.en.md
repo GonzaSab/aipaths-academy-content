@@ -29,8 +29,6 @@ tags:
   - solopreneurs
 ---
 
-# Validating Your Idea Before Building: A Framework-Driven Guide
-
 **You have an idea. Now what?**
 
 You've done the hard work of [finding your niche](https://www.aipaths.academy/es/docs/008_finding-profitable-niche-guide). You've identified a specific audience with a pressing problem. You're excited. You want to start building.

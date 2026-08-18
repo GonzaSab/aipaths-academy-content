@@ -28,8 +28,6 @@ tags:
   - collaboration
 ---
 
-# GitHub Fundamentals: A Beginner's Guide to Version Control
-
 Have you ever accidentally deleted important code? Overwritten a file that was working perfectly? Struggled to collaborate with teammates on the same project without creating conflicts?
 
 These are problems every developer faces—and version control with GitHub solves them all.

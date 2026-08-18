@@ -26,8 +26,6 @@ tags: ["n8n", "ai", "automation", "ai-agents", "news", "tools"]
 readingTime: 6
 ---
 
-# n8n is Now an AI-First Platform: 75% of Users Build AI Workflows
-
 When n8n launched in 2019, it was a scrappy open-source alternative to Zapier. Six years later, it's become something entirely different: **an AI orchestration platform with a $2.5 billion valuation and NVIDIA as an investor**.
 
 The most telling statistic? **75% of n8n customers now use AI tools** in their workflows. This isn't a pivot—it's a transformation driven by users who discovered that n8n's flexibility made it the perfect foundation for AI automation.

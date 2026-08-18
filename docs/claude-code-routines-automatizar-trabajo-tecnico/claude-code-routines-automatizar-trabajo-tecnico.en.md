@@ -13,8 +13,6 @@ tags:
   - developer-tools
   - github
 ---
-# Claude Code Routines: how to automate technical work without turning your repo into a black box
-
 Claude Code Routines let you save an instruction so Claude Code can work automatically in the cloud. Instead of opening a manual session every time, you define a routine with context, repository access, and a trigger: a schedule, an API call, or a GitHub event.
 
 The idea is powerful, but you should not treat it as “an automatic developer.” A routine can read context, make decisions, and modify code. That makes it useful for repeatable work, but also risky if you give it too much access or a goal that is too vague.

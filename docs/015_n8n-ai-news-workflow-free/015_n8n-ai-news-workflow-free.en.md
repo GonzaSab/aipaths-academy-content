@@ -23,8 +23,6 @@ coverImage: "https://raw.githubusercontent.com/openclaw-io/aipaths-academy-conte
 tags: ["n8n", "automation", "ai", "tutorial", "api", "free-tools", "ai-cli"]
 ---
 
-# Build a Free AI News Digest with n8n, REST API & Any AI CLI
-
 Learn how to build a fully automated AI-powered news digest system that runs daily, curates the top 5 AI news stories, and delivers them to your inbox - all without paying for expensive automation platforms.
 
 This guide shows you how to use **any AI CLI tool** to programmatically create n8n workflows via the REST API, giving you complete control over your automation infrastructure.

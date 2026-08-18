@@ -14,8 +14,6 @@ tags:
   - workflows
   - software-development
 ---
-# The Complete Guide to Becoming a Principled Agentic Engineer
-
 ## Editorial summary
 
 Agentic engineering is not about “asking AI for code” and accepting whatever comes back. It is also not about installing the trendiest framework and hoping an autonomous agent will solve product, architecture, and quality on its own.

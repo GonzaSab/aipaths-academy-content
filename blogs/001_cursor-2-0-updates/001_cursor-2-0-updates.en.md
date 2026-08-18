@@ -34,8 +34,6 @@ tags:
 readingTime: 10
 ---
 
-# Cursor 2.0: The AI Coding Revolution That Changes Everything
-
 On October 29, 2025, Cursor dropped a bombshell that fundamentally changed AI-assisted coding. Cursor 2.0 isn't just an update—it's a complete reimagining of how developers work with AI.
 
 The headline features: a proprietary AI model called Composer that's 4x faster than comparable alternatives, multi-agent architecture that runs up to 8 AI agents in parallel, and a suite of features that transform Cursor from an AI-enhanced editor into a full agentic development platform.
